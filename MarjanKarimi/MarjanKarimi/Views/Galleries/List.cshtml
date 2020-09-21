@@ -1,0 +1,90 @@
+﻿@model ViewModels.GalleryListViewModel
+@{
+    ViewBag.Title = "گالری تصاویر";
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+    ViewBag.Canonical = "http://www.marjankarimi.com/gallery/";
+}
+
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hb-innerbanner-area service">
+                    <div class="hb-bannarheading">
+                        <h1>گالری تصاویر</h1>
+                    </div>
+                    <ul class="hb-breadcrumb">
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li>
+                            گالری تصاویر
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Our Gallery Start
+    *************************************-->
+    <section id="hb-gallery" class="hb-gallery v2 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                گالری تصاویر
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xs-12">
+                    <div class="hb-gallery-area">
+                        <div class="hb-portfolio-head hb-haslayout">
+                            <ul id="hb-filterbale-nav" class="hb-filterbale-nav option-set">
+                                @foreach (var filter in Model.FilterList)
+                                {
+                                    <li><a data-filter=".@filter.Id" href="javascript:void(0);">@filter.Title</a></li>
+
+                                }
+                                <li><a class="active" data-filter="*" href="javascript:void(0);">همه</a></li>
+                                @*<li><a data-filter=".massage" href="javascript:void(0);">میکاپ</a></li>
+                                <li><a data-filter=".skincare" href="javascript:void(0);">شینیون</a></li>
+                                <li><a data-filter=".haircut" href="javascript:void(0);">کراتینه مو</a></li>
+                                <li><a data-filter=".nailcare" href="javascript:void(0);">ناخن</a></li>
+                                <li><a data-filter=".beautyspa" href="javascript:void(0);">اکستنشن</a></li>*@
+                            </ul>
+                        </div>
+                        <div id="filter-masonry" class="hb-portfolio-content hb-haslayout">
+                            @foreach (var gallery in Model.GelleryList)
+                            {
+                            <div class="masonry-grid @gallery.GalleryGroupId">
+                                <div class="hb-project">
+                                    <figure class="hb-galleryimg">
+                                        <img src="@gallery.ImageUrl" alt="images description" />
+                                        <figcaption class="hb-gallerycontent">
+                                            <ul class="list-unstyled hb-roundicon">
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                            </ul>
+                                            <h3>@gallery.Title</h3>
+                                            <span>@gallery.CreationDate.ToShortDateString()</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Our Gallery End
+    *************************************-->
+</main>
+

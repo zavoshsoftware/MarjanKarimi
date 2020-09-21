@@ -1,0 +1,63 @@
+﻿@model ViewModels.ServiceListViewModel
+
+	@{
+			ViewBag.Title =  Model.ServiceGroup.Title + " | مرکز زیبایی فروزان یافت آبادی";
+			Layout = "~/Views/Shared/FrontEnd/_FronEndLayout.cshtml";
+			ViewBag.Canonical = "http://www.foroozanyf.com/service/"+Model.ServiceGroup.UrlParam;
+	}
+
+<div class="breadcrumbs text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="breadcrumbs-title">
+					<h2>@Model.ServiceGroup.Title</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="breadcrumbs-menu">
+		<ul>
+			<li><a href="/">خانه <span>//</span></a></li>
+			<li>@Model.ServiceGroup.Title</li>
+		</ul>
+	</div>
+</div>
+
+<div class="shop-page ptb-100">
+	<div class="container">
+		<div class="row">
+		 
+			<div class="col-md-12 col-sm-12 col-xs-12">
+			 
+				<div class="tab-content">
+					<div id="grid" class="tab-pane active" role="tabpanel">
+						<div class="row">
+							@foreach (var service in Model.Services)
+							{
+								<div class="col-md-3 col-sm-6 col-xs-12">
+									<div class="single-feature text-center">
+										<div class="feature-img">
+											<img src="@service.HomeImageUrl" alt="@service.Title">
+										</div>
+										<div class="feature-desc">
+											<h3><a href="/service/@service.ServiceGroup.UrlParam/@service.UrlParam">@service.Title</a>
+											</h3>
+											<a href="/service/@service.ServiceGroup.UrlParam/@service.UrlParam">مشاهده جزییات</a>
+										</div>
+									</div>
+								</div>
+							}
+							
+
+						</div>
+					 
+
+					</div>
+				 
+				</div>
+			</div>
+			<!--shop sidebar end-->
+		</div>
+	</div>
+</div>

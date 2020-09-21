@@ -1,0 +1,191 @@
+﻿@font-face {
+    font-family: 'Iransans';
+    src: url(/fonts/IranSans/IRANSansWebFaNum.eot) format('embedded-opentype'), url(/fonts/IranSans/IRANSansWebFaNum.woff2) format('woff2'), url(/fonts/IranSans/IRANSansWebFaNum.woff) format('woff'), url(/fonts/IranSans/IRANSansWebFaNum.ttf) format('truetype');
+}
+
+body, p, a, h1, h2, h3, h4, h5, h6, ul, li, input, button, table, th, td {
+    font-family: IRANSans;
+}
+.hb-navigation > ul {
+    direction: rtl;
+}
+
+.hb-sliderimg {
+    padding: 0;
+}
+
+.hb-homeslider.img-left .hb-slidercontent {
+    direction: rtl;
+}
+.hb-slidercontent h1  {
+    text-align: right;
+    font-size: 45px;
+}
+
+.hb-slidercontent .hb-description p {
+    text-align: right;
+}
+a.hb-btn {
+    font-family: IRANSans !important;
+}
+
+.hb-whychooseus-content {
+    margin: 0 50px 0 0;
+}
+.hb-twoheading {
+    direction: rtl;
+    text-align: right;
+}
+.hb-whychooseus-list {
+    direction: rtl;
+}
+
+    .hb-whychooseus-list li {
+        padding: 10px 25px 10px 0;
+    }
+
+.hb-posttitle h3 a {
+    direction: rtl;
+    text-align: right;
+}
+.hb-postmeta, .hb-col h3, .hb-info {
+    direction: rtl;
+}
+.hb-emailarea .hb-formtheme .hb-btn {
+    font-family: IRANSans !important;
+}
+
+.hb-description p {
+    direction: rtl;
+    text-align: justify;
+}
+
+.dirrtl {
+    direction: rtl;
+}
+.hb-navigation ul li .sub-menu li a
+{
+    text-align:right;
+    direction:rtl;
+}
+.hb-services.v2 .hb-description p
+{
+    text-align:center;
+}
+.hb-logo {
+    padding: 4px 0;
+}
+.hb-breadcrumb
+{
+    direction:rtl;
+}
+    .hb-breadcrumb li a:after {
+        top: 0;
+        left: -3px;
+        content: '|';
+        color: #fff;
+        position: absolute;
+    }
+    .hb-breadcrumb li:after {
+        content:'';
+    }
+.service ul li .clr-white
+{
+    text-align:right;
+    direction:rtl;
+}
+.service ul li.active .fa-caret-left{
+    color:#fff;
+}
+.service ul li .fa-caret-left {
+    float: left;
+    font-size: 20px;
+    line-height: 22px;
+    margin: -34px 14px 0px 14px;
+}
+.service .content {
+    text-align: right;
+    direction: rtl;
+}
+.text-center
+{
+    text-align:center !important;
+}
+.service .hb-blogdetails .hb-post .hb-postcontent h2 {
+    text-align: right;
+    direction: rtl;
+}
+.service .hb-post .hb-description p
+{
+    text-align:justify;
+}
+.form-control
+{
+    text-align:right;direction:rtl;
+}
+.hb-btn {
+    font: 500 14px/45px 'IRANSans';
+}
+.hb-sectiontitle h2 span {
+    font-family: 'IRANSans';
+}
+.hb-headcontent .hb-description p
+{
+    text-align:justify;
+}
+.hb-sidebar, .hb-blogdetails .hb-post .hb-postcontent h2 {
+    text-align: right;
+    direction: rtl;
+}
+.hb-widgettitle h3
+{
+    font-weight:700;
+}
+.hb-commentimg{
+    float:right;
+}
+.hb-comment-content {
+    padding: 0 60px 0 0;
+}
+    .hb-comment-content:after
+    {
+        right:25px;
+        left:unset;
+    }
+.hb-paddingleft
+{
+    padding-right:80px;
+}
+.hb-blogdetails .hb-post .hb-description p{
+    text-align:justify;
+    direction:rtl;
+}
+.hb-blogdetails .hb-post .hb-postmeta li:after {
+    left: -6px;
+    right:unset;
+}
+.sub-menu
+{
+    right:0;
+    left:unset;
+}
+.text-right
+{
+    text-align:right;
+    direction:rtl;
+}
+.hb-addressbox p span
+{
+    direction:rtl;
+}
+.bg-owner {
+    background-image: url('../../images/bg-owner.jpg');
+}
+.hb-postcategory {
+    text-align: right;
+    direction: rtl;
+}
+
+.color-orange {
+    color: #e7411b;
+}

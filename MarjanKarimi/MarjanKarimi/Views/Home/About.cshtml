@@ -1,0 +1,135 @@
+﻿@model ViewModels.AboutViewModel
+@{
+    ViewBag.Title = "درباره ما";
+    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+}
+
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hb-innerbanner-area service">
+                    <div class="hb-bannarheading">
+                        <h1>درباره ما</h1>
+                    </div>
+                    <ul class="hb-breadcrumb">
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li>درباره ما</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Paradise Center Start
+    *************************************-->
+    <section id="hb-paradisecenter" class="hb-paradisecenter hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                اکادمی زیبایی مرجان کریمی
+                            </h2>
+                        </div>
+                        <div class="hb-headcontent">
+                            <h2>@Model.AboutTextItem.Title</h2>
+                            <div class="hb-description">
+                                <p>@Html.Raw(Model.AboutTextItem.Body)</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="hb-whychooseus" class="hb-whychooseus hb-sectionspace hb-haslayout bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>آکادمی زیبایی</span>
+                                چرا مرجان کریمی؟
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="hb-whychooseus-content">
+                        <div class="hb-whychooseus-title">
+                            <h3 class="hb-twoheading">خدمات ویژه</h3>
+                        </div>
+                        <ul class="list-unstyled hb-whychooseus-list">
+                            @foreach (var text in Model.WhyChooseus)
+                            {
+                                <li>@text.Title</li>
+                            }
+                        </ul>
+                        <div id="hb-statisticscounters" class="hb-statisticscounters">
+                            @foreach (var number in Model.Numbers)
+                            {
+                                <div class="hb-counter">
+                                    <h3><span data-from="0" data-to="2000" data-speed="2000" data-refresh-interval="50">@Html.Raw(number.Body)</span></h3>
+                                    <h4>@number.Title</h4>
+                                </div>
+                            }
+                          
+                           
+                        </div>
+                        <div class="hb-btnarea">
+                            <a href="/about" class="hb-btn"><i class="fa fa-gift"></i>درباره مرجان کریمی</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <figure class="hb-whychooseus-img">
+                        <img src="~/images/banner1.png" />
+                    </figure>
+                    <figure class="hb-whychooseus-img2">
+                        <img src="~/images/banner3.png" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section id="hb-appointment" class="hb-appointment hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <figure class="hb-appointmentimg">
+                        <img src="@Model.Contact.ImageUrl" alt="images description">
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                @Model.Contact.Title
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="hb-appointmentcontent">
+                        @Html.Raw(Model.Contact.Body)
+                        @*<h3>در صورتی که نیاز به مشاوره دارید می توانید از طریق زیر با من در ارتباط باشید</h3>
+                        <div class="hb-description">
+                            <p>تلفن تماس : <strong>44217662-021</strong>  </p>
+                        </div>*@
+                        <div class="hb-btnarea">
+                            <a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn">صفحه اینستاگرام مرجان کریمی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

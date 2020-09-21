@@ -1,0 +1,64 @@
+﻿@model ViewModels.BlogListViewModel
+
+	@{
+        ViewBag.Title = "لیست مقالات و اخبار";
+        Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+        ViewBag.Canonical = "http://www.marjankarimi.com/blog/";
+
+	}
+
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hb-innerbanner-area service">
+                    <div class="hb-bannarheading">
+                        <h1>لیست مقالات و اخبار</h1>
+                    </div>
+                    <ul class="hb-breadcrumb">
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li>
+                            لیست مقالات و اخبار
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Blog Start
+    *************************************-->
+    <section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="hb-post-area hb-bloggridfullwidth">
+                    @foreach (var blog in Model.Blogs)
+                    {
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <article class="hb-post">
+                                <figure class="hb-postimage">
+                                    <a href="/blog/@blog.UrlParam"><img src="@blog.ImageUrl" alt="image description"></a>
+                                </figure>
+                                <div class="hb-postcontent">
+                                    <a href="#" class="hb-postcategory">@blog.BlogGroup.Title</a>
+                                    <div class="hb-posttitle">
+                                        <h3><a href="/blog/@blog.UrlParam">@blog.Title</a></h3>
+                                    </div>
+                                    <div class="hb-postmeta">
+                                        <span>مرجان کریمی | @blog.CreationDate.ToShortDateString()</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Blog End
+    *************************************-->
+</main>

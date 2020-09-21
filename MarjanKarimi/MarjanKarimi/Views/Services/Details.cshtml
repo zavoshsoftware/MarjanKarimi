@@ -1,0 +1,112 @@
+﻿@model ViewModels.ServiceDetailViewModel
+@{
+    ViewBag.Title = Model.Service.Title;
+         Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+    ViewBag.Canonical = "http://www.marjankarimi.com/service/"   + Model.Service.UrlParam;
+}
+
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hb-innerbanner-area service">
+                    <div class="hb-bannarheading">
+                        <h1>@Model.Service.Title</h1>
+                    </div>
+                    <ul class="hb-breadcrumb">
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li>@Model.Service.Title</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Blog Start
+    *************************************-->
+    <section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout service">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 pull-left">
+                    <div class="hb-post-area hb-blogdetails">
+                        <article class="hb-post">
+                            <figure class="hb-postimage">
+                                <img src="~/images/blogs/blogDetail01.jpg" alt="image description" />
+                            </figure>
+                            <div class="hb-postcontent">
+                                <h2>@Model.Service.Title</h2>
+                            </div>
+                            <div class="hb-description">
+                                <p>
+                                   @Html.Raw(Model.Service.Body)
+                                </p>
+                             
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 pull-left">
+                    <aside id="hb-sidebar" class="hb-sidebar hb-haslayout service">
+                        <div class="hb-widget hb-recentnews">
+                            <ul>
+                                <li class="active">
+                                    <a href="/service/@Model.Service.UrlParam" class="clr-white">@Model.Service.Title</a>
+                                    <i class="fa fa-caret-left" aria-hidden="true"></i>
+                                </li>
+                                @foreach (var service in Model.SidebarServices)
+                                {
+                                    <li>
+                                        <a href="/service/@service.UrlParam" class="clr-white">@service.Title</a>
+                                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                                    </li>
+                                }
+                               
+                            </ul>
+                        </div>
+
+                        <div class="hb-widget hb-tags content">
+                            <h3>آکادمی مرجان کریمی</h3>
+                            <p>نظرات و پیشنهادات خود را با ما در میان بگذارید</p>
+                            <a href="#" class="primary-btn hb-btn text-uppercase">تماس با ما</a>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Blog End
+    *************************************-->
+    <section id="hb-appointment" class="hb-appointment hb-sectionspace hb-haslayout price-list bg-owner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                <span>مرجان کریمی</span>
+                                رزرو وقت
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="hb-appointmentcontent">
+                        <h3>برای رزرو وقت و تماس با ما با شماره های زیر در تماس باشید</h3>
+                        <div class="hb-description">
+                            <p class="text-center">شماره تماس : <strong>44217662-021</strong></p>
+                        </div>
+                        <div class="hb-btnarea">
+                            <a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn">اینستاگرام ما را دنبال کنید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

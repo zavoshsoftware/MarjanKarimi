@@ -1,0 +1,87 @@
+﻿<header id="hb-header" class="hb-header hb-haslayout">
+    <div class="hb-topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="hb-info-area">
+                        <ul class="list-unstyled hb-info">
+                            <li>
+                                <a href="mailto:info@marjankarimi.com"><i class="fa fa-envelope"></i>info@marjankarimi.com</a>
+                            </li>
+                            <li><i class="fa fa-phone"></i>021-44217662    021-44216787</li>
+                        </ul>
+                    </div>
+                    <div class="hb-socialicons-area">
+                        <ul class="hb-socialicons hb-withoutbackground list-unstyled">
+                            <li><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hb-navigationarea">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <strong class="hb-logo"><a href="/"><img src="/images/logo.png" alt="مرجان کریمی"></a></strong>
+
+                    <nav id="hb-nav" class="hb-nav">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hb-navigation" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div id="hb-navigation" class="collapse navbar-collapse hb-navigation">
+                            <ul>
+
+
+                                <li><a href="/">خانه</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">خدمات زیبایی</a>
+                                    <ul class="list-unstyled sub-menu">
+                                        @foreach (var service in Model.MenuServices)
+                                        {
+                                            <li><a href="/service/@service.UrlParam">@service.Title</a></li>
+                                        }
+                                        @*<li><a href="/Home/Service">انواع میکاپ تخصصی</a></li>
+                                        <li><a href="/Home/Service">کراتین مو</a></li>
+                                        <li><a href="/Home/Service">اکستنشن مژه</a></li>
+                                        <li><a href="/Home/Service">خدمات ناخن</a></li>
+                                        <li><a href="/Home/Service">انواع خدمات مو</a></li>
+                                        <li><a href="/Home/Service">میکروبلدینگ و میکروپیگمنتیشن</a></li>*@
+                                    </ul>
+                                </li>
+                                <li><a href="/blog">مقالات و اخبار</a></li>
+                                <li><a href="/Gallery">گالری تصاویر</a></li>
+                                <li><a href="/About">درباره ما</a></li>
+                                <li><a href="/Contact">تماس با ما</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--************************************
+        Header End
+*************************************-->
+<div class="search-popup">
+    <div class="holder">
+        <div class="block">
+            <a href="#" class="close-btn"><i class="fa fa-times"></i></a>
+            <form action="#" class="search-form">
+                <fieldset>
+                    <input type="search" class="form-control" placeholder="Search">
+                    <button type="submit" class="btn-primary"><i class="fa fa-search"></i></button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
