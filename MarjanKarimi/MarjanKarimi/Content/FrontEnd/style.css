@@ -1300,7 +1300,7 @@ address {
   text-align: center;
   position: absolute;
   margin: 0 0 0 -40px;
-  background: #fff url("../images/heading-icon.png") no-repeat 50%;
+  background: #fff url("/images/heading-icon.png") no-repeat 50%;
 }
 
 .hb-sectiontitle h2 {
