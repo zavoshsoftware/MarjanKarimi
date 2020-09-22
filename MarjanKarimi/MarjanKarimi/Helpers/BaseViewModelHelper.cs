@@ -4,7 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using Models;
- 
+using static ViewModels._BaseViewModel;
+
 //using ViewModels;
 
 namespace Helpers
@@ -12,9 +13,19 @@ namespace Helpers
     public class BaseViewModelHelper
     {
         private DatabaseContext db = new DatabaseContext();
-        public List<Service> GetMenuSerivce()
+        public List<MegaMenuService> GetMenuSerivce()
         {
-            return db.Services.Where(current =>current.IsDeleted == false && current.IsActive).OrderBy(current => current.Order).ToList();
+            List<ServiceGroup> groups = db.ServiceGroups.Where(current => current.IsActive && !current.IsDeleted).OrderBy(current=>current.Order).ToList();
+            List<MegaMenuService> result = new List<MegaMenuService>();
+            foreach (ServiceGroup group in groups)
+            {
+                result.Add(new MegaMenuService()
+                {
+                    ServiceGroup=group,
+                    Services = db.Services.Where(current=>current.IsActive && !current.IsDeleted && current.ServiceGroupId == group.Id).OrderBy(current => current.Order).ToList()
+                });
+            }
+            return result;
         }
         public TextItem GetFooterText()
         {

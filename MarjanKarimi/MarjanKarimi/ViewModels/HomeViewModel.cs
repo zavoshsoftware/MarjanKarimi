@@ -10,7 +10,7 @@ namespace ViewModels
     {
         public List<Slider> Sliders { get; set; }
         public List<Gallery> GalleryImages { get; set; }
-        public List<Service> HomeServices { get; set; }
+        public List<ServiceGroup> HomeServiceGroups { get; set; }
         public List<Blog> HomeBlogs { get; set; }
         public List<TextItem> WhyChooseus { get; set; }
         public List<TextItem> Numbers { get; set; }

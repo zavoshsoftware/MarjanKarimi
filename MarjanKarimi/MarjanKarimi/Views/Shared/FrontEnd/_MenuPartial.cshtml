@@ -42,20 +42,34 @@
 
 
                                 <li><a href="/">خانه</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">خدمات زیبایی</a>
-                                    <ul class="list-unstyled sub-menu">
-                                        @foreach (var service in Model.MenuServices)
+                                <li class="current-menu-item menu-item-has-mega-menu">
+                                    <a href="#">دوره های آموزشی</a>
+                                    <ul class="mega-menu-row list-unstyled sub-menu main-mega-menu row">
+                                        @foreach (var group in Model.MenuServices)
                                         {
-                                            <li><a href="/service/@service.UrlParam">@service.Title</a></li>
+                                            <li class="col-md-2 col-lg-2 col-xs-6 col-sm-6 mega-menu-title">
+                                                <a href="/category/@group.ServiceGroup.UrlParam" class="mega-submenu-title">@group.ServiceGroup.Title</a>
+                                                <ul class="mega-submenu">
+                                                    @foreach (var service in group.Services)
+                                                    {
+                                                        <li><a href="/service/@service.UrlParam">@service.Title</a></li>
+                                                    }
+                                                </ul>
+                                            </li>
                                         }
-                                        @*<li><a href="/Home/Service">انواع میکاپ تخصصی</a></li>
-                                        <li><a href="/Home/Service">کراتین مو</a></li>
-                                        <li><a href="/Home/Service">اکستنشن مژه</a></li>
-                                        <li><a href="/Home/Service">خدمات ناخن</a></li>
-                                        <li><a href="/Home/Service">انواع خدمات مو</a></li>
-                                        <li><a href="/Home/Service">میکروبلدینگ و میکروپیگمنتیشن</a></li>*@
                                     </ul>
+                                    @*<ul class="list-unstyled sub-menu mega-menu-col">
+                                            @foreach (var service in Model.MenuServices)
+                                            {
+                                                <li><a href="/service/@service.UrlParam">@service.Title</a></li>
+                                            }
+                                        </ul>
+                                        <ul class="list-unstyled sub-menu mega-menu-col">
+                                            @foreach (var service in Model.MenuServices)
+                                            {
+                                                <li><a href="/service/@service.UrlParam">@service.Title</a></li>
+                                            }
+                                        </ul>*@
                                 </li>
                                 <li><a href="/blog">مقالات و اخبار</a></li>
                                 <li><a href="/Gallery">گالری تصاویر</a></li>

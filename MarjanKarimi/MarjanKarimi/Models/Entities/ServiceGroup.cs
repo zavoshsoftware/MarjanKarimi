@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Models
 {
@@ -23,6 +25,21 @@ namespace Models
         public Guid? ParentId { get; set; }
         [Display(Name = "اولویت نمایش")]
         public int? Order { get; set; }
+
+        [Display(Name = "تصویر")]
+        public string ImageUrl { get; set; }
+
+        [Display(Name = "خلاصه")]
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
+        public string Summery { get; set; }
+
+        [Display(Name = "متن صفحه")]
+        [DataType(DataType.Html)]
+        [AllowHtml]
+        [Column(TypeName = "ntext")]
+        [UIHint("RichText")]
+        public string Body { get; set; }
 
         public virtual ServiceGroup Parent { get; set; }
 

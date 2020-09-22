@@ -6,6 +6,7 @@
 body, p, a, h1, h2, h3, h4, h5, h6, ul, li, input, button, table, th, td {
     font-family: IRANSans;
 }
+
 .hb-navigation > ul {
     direction: rtl;
 }
@@ -17,7 +18,8 @@ body, p, a, h1, h2, h3, h4, h5, h6, ul, li, input, button, table, th, td {
 .hb-homeslider.img-left .hb-slidercontent {
     direction: rtl;
 }
-.hb-slidercontent h1  {
+
+.hb-slidercontent h1 {
     text-align: right;
     font-size: 45px;
 }
@@ -25,6 +27,7 @@ body, p, a, h1, h2, h3, h4, h5, h6, ul, li, input, button, table, th, td {
 .hb-slidercontent .hb-description p {
     text-align: right;
 }
+
 a.hb-btn {
     font-family: IRANSans !important;
 }
@@ -32,10 +35,12 @@ a.hb-btn {
 .hb-whychooseus-content {
     margin: 0 50px 0 0;
 }
+
 .hb-twoheading {
     direction: rtl;
     text-align: right;
 }
+
 .hb-whychooseus-list {
     direction: rtl;
 }
@@ -48,9 +53,11 @@ a.hb-btn {
     direction: rtl;
     text-align: right;
 }
+
 .hb-postmeta, .hb-col h3, .hb-info {
     direction: rtl;
 }
+
 .hb-emailarea .hb-formtheme .hb-btn {
     font-family: IRANSans !important;
 }
@@ -63,22 +70,24 @@ a.hb-btn {
 .dirrtl {
     direction: rtl;
 }
-.hb-navigation ul li .sub-menu li a
-{
-    text-align:right;
-    direction:rtl;
+
+.hb-navigation ul li .sub-menu li a {
+    text-align: right;
+    direction: rtl;
 }
-.hb-services.v2 .hb-description p
-{
-    text-align:center;
+
+.hb-services.v2 .hb-description p {
+    text-align: center;
 }
+
 .hb-logo {
     padding: 4px 0;
 }
-.hb-breadcrumb
-{
-    direction:rtl;
+
+.hb-breadcrumb {
+    direction: rtl;
 }
+
     .hb-breadcrumb li a:after {
         top: 0;
         left: -3px;
@@ -86,101 +95,116 @@ a.hb-btn {
         color: #fff;
         position: absolute;
     }
+
     .hb-breadcrumb li:after {
-        content:'';
+        content: '';
     }
-.service ul li .clr-white
-{
-    text-align:right;
-    direction:rtl;
+
+.service ul li .clr-white {
+    text-align: right;
+    direction: rtl;
 }
-.service ul li.active .fa-caret-left{
-    color:#fff;
+
+.service ul li.active .fa-caret-left {
+    color: #fff;
 }
+
 .service ul li .fa-caret-left {
     float: left;
     font-size: 20px;
     line-height: 22px;
     margin: -34px 14px 0px 14px;
 }
+
 .service .content {
     text-align: right;
     direction: rtl;
 }
-.text-center
-{
-    text-align:center !important;
+
+.text-center {
+    text-align: center !important;
 }
+
 .service .hb-blogdetails .hb-post .hb-postcontent h2 {
     text-align: right;
     direction: rtl;
 }
-.service .hb-post .hb-description p
-{
-    text-align:justify;
+
+.service .hb-post .hb-description p {
+    text-align: justify;
 }
-.form-control
-{
-    text-align:right;direction:rtl;
+
+.form-control {
+    text-align: right;
+    direction: rtl;
 }
+
 .hb-btn {
     font: 500 14px/45px 'IRANSans';
 }
+
 .hb-sectiontitle h2 span {
     font-family: 'IRANSans';
 }
-.hb-headcontent .hb-description p
-{
-    text-align:justify;
+
+.hb-headcontent .hb-description p {
+    text-align: justify;
 }
+
 .hb-sidebar, .hb-blogdetails .hb-post .hb-postcontent h2 {
     text-align: right;
     direction: rtl;
 }
-.hb-widgettitle h3
-{
-    font-weight:700;
+
+.hb-widgettitle h3 {
+    font-weight: 700;
 }
-.hb-commentimg{
-    float:right;
+
+.hb-commentimg {
+    float: right;
 }
+
 .hb-comment-content {
     padding: 0 60px 0 0;
 }
-    .hb-comment-content:after
-    {
-        right:25px;
-        left:unset;
+
+    .hb-comment-content:after {
+        right: 25px;
+        left: unset;
     }
-.hb-paddingleft
-{
-    padding-right:80px;
+
+.hb-paddingleft {
+    padding-right: 80px;
 }
-.hb-blogdetails .hb-post .hb-description p{
-    text-align:justify;
-    direction:rtl;
+
+.hb-blogdetails .hb-post .hb-description p {
+    text-align: justify;
+    direction: rtl;
 }
+
 .hb-blogdetails .hb-post .hb-postmeta li:after {
     left: -6px;
-    right:unset;
+    right: unset;
 }
-.sub-menu
-{
-    right:0;
-    left:unset;
+
+.sub-menu {
+    right: 0;
+    left: unset;
 }
-.text-right
-{
-    text-align:right;
-    direction:rtl;
+
+.text-right {
+    text-align: right;
+    direction: rtl;
 }
-.hb-addressbox p span
-{
-    direction:rtl;
+
+.hb-addressbox p span {
+    direction: rtl;
 }
+
 .bg-owner {
     background-image: url('../../images/bg-owner.jpg');
 }
+
 .hb-postcategory {
     text-align: right;
     direction: rtl;
@@ -188,4 +212,59 @@ a.hb-btn {
 
 .color-orange {
     color: #e7411b;
+}
+@media (max-width: 991px) {
+    .navbar-collapse ul li a{
+        text-align:right;
+    }
+    .navbar-collapse ul li.hb-open .sub-menu li a {
+        background: #f6f1f1;
+    }
+    .sub-menu
+    {
+        padding:unset;
+    }
+    /*.navbar-collapse .menu-item-has-mega-menu
+    {
+        content:list-item;
+    }
+    .mega-submenu{
+        display:none;
+    }*/
+    
+}
+    @media (min-width: 992px) {
+        .main-mega-menu {
+            width: 1000px;
+            text-align: right;
+            padding: 20px;
+            right:-52px;
+        }
+
+            .main-mega-menu li {
+                padding: 5px;
+            }
+
+            .main-mega-menu .col-md-2 {
+                float: right;
+                width: 19.66667%;
+            }
+    }
+    /*.main-mega-menu :last-child {
+        border-left:unset;
+    }*/
+
+    .mega-menu-title a {
+        text-align: right;
+    }
+
+    .mega-submenu li {
+        padding: 10px 0;
+    }
+
+.mega-submenu-title {
+    color: #864386 !important;
+    font-size: 16px;
+    font-weight: 900;
+    padding-bottom: 15px;
 }

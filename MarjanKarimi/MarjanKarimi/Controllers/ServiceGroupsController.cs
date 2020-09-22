@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Models;
+using System.IO;
+using ViewModels;
 
 namespace MarjanKarimi.Controllers
 {
@@ -46,11 +48,29 @@ namespace MarjanKarimi.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ServiceGroup serviceGroup, Guid? id)
+        public ActionResult Create(ServiceGroup serviceGroup, Guid? id,HttpPostedFileBase fileUpload)
         {
             if (ModelState.IsValid)
             {
-				serviceGroup.IsDeleted=false;
+                #region Upload and resize image if needed
+
+                if (fileUpload != null)
+                {
+                    string filename = Path.GetFileName(fileUpload.FileName);
+                    string newFilename = Guid.NewGuid().ToString().Replace("-", string.Empty)
+                                         + Path.GetExtension(filename);
+
+                    string newFilenameUrl = "/Uploads/ServiceGroup/" + newFilename;
+                    string physicalFilename = Server.MapPath(newFilenameUrl);
+
+                    fileUpload.SaveAs(physicalFilename);
+
+                    serviceGroup.ImageUrl = newFilenameUrl;
+                }
+
+                
+                #endregion
+                serviceGroup.IsDeleted=false;
 				serviceGroup.CreationDate= DateTime.Now; 
                 serviceGroup.Id = Guid.NewGuid();
 
@@ -87,11 +107,29 @@ namespace MarjanKarimi.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( ServiceGroup serviceGroup)
+        public ActionResult Edit( ServiceGroup serviceGroup,HttpPostedFileBase fileUpload)
         {
             if (ModelState.IsValid)
             {
-				serviceGroup.IsDeleted = false;
+                #region Upload and resize image if needed
+
+                if (fileUpload != null)
+                {
+                    string filename = Path.GetFileName(fileUpload.FileName);
+                    string newFilename = Guid.NewGuid().ToString().Replace("-", string.Empty)
+                                         + Path.GetExtension(filename);
+
+                    string newFilenameUrl = "/Uploads/ServiceGroup/" + newFilename;
+                    string physicalFilename = Server.MapPath(newFilenameUrl);
+
+                    fileUpload.SaveAs(physicalFilename);
+
+                    serviceGroup.ImageUrl = newFilenameUrl;
+                }
+
+
+                #endregion
+                serviceGroup.IsDeleted = false;
 				serviceGroup.LastModifiedDate = DateTime.Now;
                 db.Entry(serviceGroup).State = EntityState.Modified;
                 db.SaveChanges();
@@ -146,6 +184,25 @@ namespace MarjanKarimi.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        [AllowAnonymous]
+        [Route("category/{serviceGroupUrlParam}")]
+        public ActionResult Details(string serviceGroupUrlParam)
+        {
+            ServiceGroup serviceGroup = db.ServiceGroups.FirstOrDefault(c => c.UrlParam == serviceGroupUrlParam);
+
+            if (serviceGroup == null)
+                return RedirectPermanent("/");
+            ServiceGroupDetailViewModel serviceGroupDetail = new ServiceGroupDetailViewModel()
+            {
+                Services=db.Services.Where(current=>current.IsActive && !current.IsDeleted && current.ServiceGroupId == serviceGroup.Id).ToList(),
+                ServiceGroup=serviceGroup,
+                SidebarServiceGroups = db.ServiceGroups.Where(c => c.IsDeleted == false && c.IsActive && c.Id!=serviceGroup.Id).OrderBy(c => c.Order).ToList(),
+            };
+
+            return View(serviceGroupDetail);
         }
     }
 }

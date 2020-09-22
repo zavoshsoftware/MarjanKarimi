@@ -2,251 +2,251 @@
 @{
     ViewBag.Title = "";
     Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
-    ViewBag.Canonical = "http://www.marjankarimi.com/blog/" ;
+    ViewBag.Canonical = "http://www.marjankarimi.com/blog/";
 }
 
 
-       
-        <div id="hb-homeslider" class="hb-homeslider owl-carousel owl-theme img-left hb-haslayout">
-            @foreach (var slide in Model.Sliders)
+
+<div id="hb-homeslider" class="hb-homeslider owl-carousel owl-theme img-left hb-haslayout">
+    @foreach (var slide in Model.Sliders)
             {
-                <div class="item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="hb-slidercontent-area">
-                                <figure class="hb-sliderimg">
-                                    <img src="@slide.ImageUrl" alt="آموزش و خدمات زیبایی مرجان کریمی" class="img-responsive" />
-                                    <figcaption class="hb-slidercontent">
-                                        <h1>@slide.Title</h1>
-                                        <div class="hb-description">
-                                            <p>@slide.Summery</p>
-                                        </div>
-                                        <a href="@slide.LandingPage" class="hb-btn">@slide.LinkTitle</a>
-                                    </figcaption>
-                                </figure>
-                            </div>
+        <div class="item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="hb-slidercontent-area">
+                            <figure class="hb-sliderimg">
+                                <img src="@slide.ImageUrl" alt="آموزش و خدمات زیبایی مرجان کریمی" class="img-responsive" />
+                                <figcaption class="hb-slidercontent">
+                                    <h1>@slide.Title</h1>
+                                    <div class="hb-description">
+                                        <p>@slide.Summery</p>
+                                    </div>
+                                    <a href="@slide.LandingPage" class="hb-btn">@slide.LinkTitle</a>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
             </div>
-            }
         </div>
-     
-        <main id="hb-main" class="hb-main hb-haslayout">
-            <!--************************************
-                        Services Start
-            *************************************-->
-            <section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
-                            <div class="hb-sectionhead mb-50">
-                                <div class="hb-sectiontitle">
-                                    <h2>
-                                        مرجان کریمی
-                                    </h2>
-                                </div>
-                                <div class="hb-headcontent">
-                                    <h2>آموزش و خدمات تخصصی </h2>
+    }
+</div>
+
+<main id="hb-main" class="hb-main hb-haslayout">
+    <!--************************************
+                Services Start
+    *************************************-->
+    <section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                مرجان کریمی
+                            </h2>
+                        </div>
+                        <div class="hb-headcontent">
+                            <h2>آموزش و خدمات تخصصی </h2>
+                            <div class="hb-description">
+                                <p>مرجان کریمی موسس آکادمی زیبایی مرجان کریمی، دارای مجوز رسمی از سازمان فنی حرفه ای</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hb-servicesslider" class="hb-servicesslider hb-haslayout owl-carousel owl-theme">
+                    @foreach (var service in Model.HomeServiceGroups)
+                    {
+                        <div class="item">
+                            <div class="hb-servicebox bg-grey sm-round">
+                                <figure class="hb-serviceimg">
+                                    <img src="@service.ImageUrl" alt="images description" class="img-responsive">
+                                    <figcaption class="hb-imagecontent">
+                                        <a href="/category/@service.UrlParam" class="hb-btn">اطلاعات بیشتر</a>
+                                    </figcaption>
+                                </figure>
+                                <div class="hb-servicecontent">
+                                    <h3 class="hb-headingtree">@service.Title</h3>
                                     <div class="hb-description">
-                                        <p>مرجان کریمی موسس آکادمی زیبایی مرجان کریمی، دارای مجوز رسمی از سازمان فنی حرفه ای</p>
+                                        <p>@service.Summery</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="hb-servicesslider" class="hb-servicesslider hb-haslayout owl-carousel owl-theme">
-                            @foreach (var service in Model.HomeServices)
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+                Services End
+    *************************************-->
+    <!--************************************
+                Why Choose US Start
+    *************************************-->
+    <section id="hb-whychooseus" class="hb-whychooseus v4 hb-sectionspace hb-bg hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                چرا مرجان کریمی؟
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="hb-whychooseus-content">
+                        <div class="hb-whychooseus-title">
+                            <h3 class="hb-twoheading">خدمات ویژه</h3>
+                        </div>
+                        <ul class="list-unstyled hb-whychooseus-list">
+                            @foreach (var text in Model.WhyChooseus)
                             {
-                            <div class="item">
-                                <div class="hb-servicebox bg-grey sm-round">
-                                    <figure class="hb-serviceimg">
-                                        <img src="@service.HomeImageUrl" alt="images description" class="img-responsive">
-                                        <figcaption class="hb-imagecontent">
-                                            <a href="/service/@service.UrlParam" class="hb-btn">اطلاعات بیشتر</a>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="hb-servicecontent">
-                                        <h3 class="hb-headingtree">@service.Title</h3>
-                                        <div class="hb-description">
-                                            <p>@service.Summery</p>
-                                        </div>
-                                    </div>
+                                <li>@text.Title</li>
+                            }
+                        </ul>
+                        <div id="hb-statisticscounters" class="hb-statisticscounters">
+                            @foreach (var text in Model.Numbers)
+                            {
+                                <div class="hb-counter">
+                                    <h3><span data-from="0" data-to="2000" data-speed="2000" data-refresh-interval="50">@Html.Raw(text.Body)</span></h3>
+                                    <h4>@text.Title</h4>
                                 </div>
-                            </div>
                             }
 
+
+                        </div>
+                        <div class="hb-btnarea">
+                            <a href="/about" class="hb-btn"><i class="fa fa-gift"></i>درباره مرجان کریمی</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!--************************************
-                        Services End
-            *************************************-->
-            <!--************************************
-                        Why Choose US Start
-            *************************************-->
-            <section id="hb-whychooseus" class="hb-whychooseus v4 hb-sectionspace hb-bg hb-haslayout">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
-                            <div class="hb-sectionhead mb-50">
-                                <div class="hb-sectiontitle">
-                                    <h2>
-                                        چرا مرجان کریمی؟
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <div class="hb-whychooseus-content">
-                                <div class="hb-whychooseus-title">
-                                    <h3 class="hb-twoheading">خدمات ویژه</h3>
-                                </div>
-                                <ul class="list-unstyled hb-whychooseus-list">
-                                    @foreach (var text in Model.WhyChooseus)
-                                    {
-                                        <li>@text.Title</li>
-                                    }
-                                </ul>
-                                <div id="hb-statisticscounters" class="hb-statisticscounters">
-                                    @foreach (var text in Model.Numbers)
-                                    {
-                                        <div class="hb-counter">
-                                            <h3><span data-from="0" data-to="2000" data-speed="2000" data-refresh-interval="50">@Html.Raw(text.Body)</span></h3>
-                                            <h4>@text.Title</h4>
-                                        </div>
-                                    }
-                                    
-                                   
-                                </div>
-                                <div class="hb-btnarea">
-                                    <a href="/about" class="hb-btn"><i class="fa fa-gift"></i>درباره مرجان کریمی</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <figure class="hb-whychooseus-img">
-                                <img src="~/images/banner1.png" />
-                            </figure>
-                            <figure class="hb-whychooseus-img2">
-                                <img src="~/images/banner3.png" />
-                            </figure>
-                        </div>
-
-                    </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <figure class="hb-whychooseus-img">
+                        <img src="~/images/banner1.png" />
+                    </figure>
+                    <figure class="hb-whychooseus-img2">
+                        <img src="~/images/banner3.png" />
+                    </figure>
                 </div>
-            </section>
 
-            <section id="hb-gallery" class="hb-gallery v2 v4 hb-sectionspace hb-haslayout">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
-                            <div class="hb-sectionhead mb-50">
-                                <div class="hb-sectiontitle">
-                                    <h2>
-                                        گالری تصاویر
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-xs-12">
-                            <div class="hb-gallery-area">
+            </div>
+        </div>
+    </section>
 
-                                <div id="filter-masonry" class="hb-portfolio-content hb-haslayout">
-                                    @foreach (var gallery in Model.GalleryImages)
-                                    {
-                                    <div class="masonry-grid massage">
-                                        <div class="hb-project">
-                                            <figure class="hb-galleryimg">
-                                                <img src="@gallery.ThumbImageUrl" alt="images description" />
-                                                <figcaption class="hb-gallerycontent">
-                                                    <ul class="list-unstyled hb-roundicon">
-                                                        <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
-                                                        <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
-                                                    </ul>
-                                                    <h3>@gallery.Title</h3>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    }
-                                </div>
-                                <div class="text-center">
-                                    <a href="/gallery" class="hb-btn text-uppercase">مشاهده تمامی تصاویر گالری</a>
-                                </div>
-                            </div>
+    <section id="hb-gallery" class="hb-gallery v2 v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead mb-50">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                گالری تصاویر
+                            </h2>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class=" col-xs-12">
+                    <div class="hb-gallery-area">
 
-            <section id="hb-appointment" class="hb-appointment v4 hb-sectionspace hb-haslayout bg-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-5">
-                            <figure class="hb-appointmentimg">
-                                <img src="~/images/marjankarimi.jpg" alt="images description">
-                            </figure>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-7">
-                            <div class="hb-sectionhead">
-                                <div class="hb-sectiontitle">
-                                    <h2>
-                                        تماس با من
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="hb-appointmentcontent">
-                                <h3>در صورتی که نیاز به مشاوره دارید می توانید از طریق زیر با من در ارتباط باشید</h3>
-                                <div class="hb-description">
-                                    <p class="text-center">تلفن تماس : <strong>44217662</strong>  </p>
-                                </div>
-                                <div class="hb-btnarea">
-                                    <a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn">صفحه اینستاگرام مرجان کریمی</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="hb-blog" class="hb-blog v4 hb-sectionspace hb-haslayout">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
-                            <div class="hb-sectionhead">
-                                <div class="hb-sectiontitle">
-                                    <h2>
-                                        آخرین مقالات آموزشی
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hb-post-area">
-                            @foreach (var blog in Model.HomeBlogs)
+                        <div id="filter-masonry" class="hb-portfolio-content hb-haslayout">
+                            @foreach (var gallery in Model.GalleryImages)
                             {
-                            <div class="col-xs-12 col-sm-6">
-                                <article class="hb-post">
-                                    <figure class="hb-postimage">
-                                        <a href="/Blog/@blog.UrlParam"><img src="@blog.ImageUrl" alt="image description"></a>
-                                    </figure>
-                                    <div class="hb-postcontent">
-                                        <div class="hb-posttitle">
-                                            <h3><a href="/Blog/@blog.UrlParam">@blog.Title</a></h3>
-                                        </div>
-                                        <div class="hb-postmeta">
-                                            <span>مرجان کریمی | @blog.CreationDate.ToShortDateString()</span>
-                                        </div>
+                                <div class="masonry-grid massage">
+                                    <div class="hb-project">
+                                        <figure class="hb-galleryimg">
+                                            <img src="@gallery.ThumbImageUrl" alt="images description" />
+                                            <figcaption class="hb-gallerycontent">
+                                                <ul class="list-unstyled hb-roundicon">
+                                                    <li><a href="javascript:void(0)" class="hb-g-icon hover1"><i class="fas fa-arrows-alt"></i></a></li>
+                                                    <li><a href="javascript:void(0)" class="hb-g-icon hover2"><i class="fas fa-link"></i></a></li>
+                                                </ul>
+                                                <h3>@gallery.Title</h3>
+                                            </figcaption>
+                                        </figure>
                                     </div>
-                                </article>
-                            </div>
+                                </div>
                             }
                         </div>
+                        <div class="text-center">
+                            <a href="/gallery" class="hb-btn text-uppercase">مشاهده تمامی تصاویر گالری</a>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-        </main>
+    <section id="hb-appointment" class="hb-appointment v4 hb-sectionspace hb-haslayout bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <figure class="hb-appointmentimg">
+                        <img src="~/images/marjankarimi.jpg" alt="images description">
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                تماس با من
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="hb-appointmentcontent">
+                        <h3>در صورتی که نیاز به مشاوره دارید می توانید از طریق زیر با من در ارتباط باشید</h3>
+                        <div class="hb-description">
+                            <p class="text-center">تلفن تماس : <strong>44217662</strong>  </p>
+                        </div>
+                        <div class="hb-btnarea">
+                            <a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn">صفحه اینستاگرام مرجان کریمی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hb-blog" class="hb-blog v4 hb-sectionspace hb-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+                    <div class="hb-sectionhead">
+                        <div class="hb-sectiontitle">
+                            <h2>
+                                آخرین مقالات آموزشی
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="hb-post-area">
+                    @foreach (var blog in Model.HomeBlogs)
+                    {
+                        <div class="col-xs-12 col-sm-6">
+                            <article class="hb-post">
+                                <figure class="hb-postimage">
+                                    <a href="/Blog/@blog.UrlParam"><img src="@blog.ImageUrl" alt="image description"></a>
+                                </figure>
+                                <div class="hb-postcontent">
+                                    <div class="hb-posttitle">
+                                        <h3><a href="/Blog/@blog.UrlParam">@blog.Title</a></h3>
+                                    </div>
+                                    <div class="hb-postmeta">
+                                        <span>مرجان کریمی | @blog.CreationDate.ToShortDateString()</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>

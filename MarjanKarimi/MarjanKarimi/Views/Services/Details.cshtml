@@ -54,13 +54,13 @@
                         <div class="hb-widget hb-recentnews">
                             <ul>
                                 <li class="active">
-                                    <a href="/service/@Model.Service.UrlParam" class="clr-white">@Model.Service.Title</a>
+                                    <a href="/service/@Model.ServiceGroup.UrlParam" class="clr-white">@Model.ServiceGroup.Title</a>
                                     <i class="fa fa-caret-left" aria-hidden="true"></i>
                                 </li>
-                                @foreach (var service in Model.SidebarServices)
+                                @foreach (var service in Model.SidebarServiceGroups)
                                 {
                                     <li>
-                                        <a href="/service/@service.UrlParam" class="clr-white">@service.Title</a>
+                                        <a href="/category/@service.UrlParam" class="clr-white">@service.Title</a>
                                         <i class="fa fa-caret-left" aria-hidden="true"></i>
                                     </li>
                                 }

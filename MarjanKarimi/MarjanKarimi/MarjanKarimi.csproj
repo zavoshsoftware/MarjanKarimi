@@ -994,6 +994,18 @@
     <Compile Include="Migrations\202008150545323_V06.designer.cs">
       <DependentUpon>202008150545323_V06.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009211059046_V07.cs" />
+    <Compile Include="Migrations\202009211059046_V07.designer.cs">
+      <DependentUpon>202009211059046_V07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009211119319_V08.cs" />
+    <Compile Include="Migrations\202009211119319_V08.designer.cs">
+      <DependentUpon>202009211119319_V08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009211146291_V09.cs" />
+    <Compile Include="Migrations\202009211146291_V09.designer.cs">
+      <DependentUpon>202009211146291_V09.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\DatabaseContextInitializer.cs" />
@@ -1022,6 +1034,7 @@
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ServiceDetailViewModel.cs" />
+    <Compile Include="ViewModels\ServiceGroupDetailViewModel.cs" />
     <Compile Include="ViewModels\ServiceListViewModel.cs" />
     <Compile Include="ViewModels\_BaseViewModel.cs" />
   </ItemGroup>
@@ -1341,6 +1354,7 @@
     <Content Include="Views\Galleries\Edit.cshtml" />
     <Content Include="Views\Galleries\Index.cshtml" />
     <Content Include="Views\Galleries\List.cshtml" />
+    <Content Include="Views\ServiceGroups\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1352,6 +1366,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\Blog\" />
     <Folder Include="Uploads\Gallery\" />
+    <Folder Include="Uploads\ServiceGroup\" />
     <Folder Include="Uploads\Service\" />
     <Folder Include="Uploads\Slider\" />
     <Folder Include="Uploads\Text\" />
@@ -1374,6 +1389,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008150545323_V06.resx">
       <DependentUpon>202008150545323_V06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211059046_V07.resx">
+      <DependentUpon>202009211059046_V07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211119319_V08.resx">
+      <DependentUpon>202009211119319_V08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211146291_V09.resx">
+      <DependentUpon>202009211146291_V09.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

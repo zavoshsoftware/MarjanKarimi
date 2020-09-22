@@ -10,7 +10,7 @@ namespace ViewModels
     public class _BaseViewModel
     {
         readonly BaseViewModelHelper _baseViewModelHelper = new BaseViewModelHelper();
-        public List<Service> MenuServices
+        public List<MegaMenuService> MenuServices
         {
             get
             {
@@ -18,12 +18,18 @@ namespace ViewModels
 
             }
         }
-      public TextItem FooterDesc
+        public TextItem FooterDesc
         {
             get
             {
                 return _baseViewModelHelper.GetFooterText();
             }
+        }
+
+        public class MegaMenuService
+        {
+            public ServiceGroup ServiceGroup { get; set; }
+            public List<Service> Services { get; set; }
         }
       
     }

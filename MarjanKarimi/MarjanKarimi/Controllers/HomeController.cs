@@ -17,7 +17,7 @@ namespace MarjanKarimi.Controllers
             HomeViewModel viewModel = new HomeViewModel()
             {
                 GalleryImages = db.Galleries.Where(current=>current.IsActive && !current.IsDeleted).OrderByDescending(current=>current.CreationDate).Take(6).ToList(),
-                HomeServices = db.Services.Where(current => current.IsActive && !current.IsDeleted).OrderByDescending(current => current.CreationDate).Take(6).ToList(),
+                HomeServiceGroups = db.ServiceGroups.Where(current => current.IsActive && !current.IsDeleted).OrderByDescending(current => current.Order).ToList(),
                 HomeBlogs = db.Blogs.Where(current => current.IsActive && !current.IsDeleted).OrderByDescending(current => current.CreationDate).Take(2).ToList(),
                 Sliders = db.Sliders.Where(current => current.IsActive && !current.IsDeleted).OrderByDescending(current => current.CreationDate).ToList(),
                 WhyChooseus = db.TextItems.Where(current => current.IsActive && !current.IsDeleted && current.TextItemType.UrlParam.ToLower() == "homewhymarjan").ToList(),

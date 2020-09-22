@@ -208,8 +208,8 @@ namespace MarjanKarimi.Controllers
             {
                
                 Service = service,
-
-                SidebarServices = db.Services.Where(c => c.IsDeleted == false && c.IsActive && c.Id!=service.Id).OrderBy(c => c.Order).ToList(),
+                ServiceGroup = db.ServiceGroups.Find(service.ServiceGroupId),
+                SidebarServiceGroups = db.ServiceGroups.Where(c => c.IsDeleted == false && c.IsActive && c.Id != service.ServiceGroupId).OrderBy(c => c.Order).ToList(),
 
                 
 
