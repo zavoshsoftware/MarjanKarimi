@@ -268,3 +268,16 @@ a.hb-btn {
     font-weight: 900;
     padding-bottom: 15px;
 }
+
+
+.hb-blogdetails .hb-post .hb-description li {
+    color: #7a7992;
+    font-size: 14px;
+    margin: 0 0 14px;
+    direction: rtl;
+    text-align: right;
+}
+
+.service .hb-blogdetails .hb-post figure {
+    direction: rtl;
+}
