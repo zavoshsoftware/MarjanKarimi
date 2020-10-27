@@ -563,6 +563,7 @@
     <Content Include="images\1-01.jpg" />
     <Content Include="images\404-icon.png" />
     <Content Include="images\avatar.png" />
+    <Content Include="images\banner1.jpg" />
     <Content Include="images\banner1.png" />
     <Content Include="images\banner2.png" />
     <Content Include="images\banner3.png" />
@@ -1411,7 +1412,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51081</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -1,11 +1,10 @@
 ﻿@model ViewModels.HomeViewModel
 @{
-    ViewBag.Title = "";
-    Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
-    ViewBag.Canonical = "http://www.marjankarimi.com/blog/";
+		ViewBag.Title = "";
+		Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+		ViewBag.Canonical = "http://www.marjankarimi.com/blog/";
+	ViewBag.Canonical = "https://www.marjankarimi.com";
 }
-
-
 
 <div id="hb-homeslider" class="hb-homeslider owl-carousel owl-theme img-left hb-haslayout">
     @foreach (var slide in Model.Sliders)
@@ -16,7 +15,7 @@
                     <div class="col-xs-12">
                         <div class="hb-slidercontent-area">
                             <figure class="hb-sliderimg">
-                                <img src="@slide.ImageUrl" alt="آموزش و خدمات زیبایی مرجان کریمی" class="img-responsive" />
+                                <img src="@slide.ImageUrl" alt="آموزش خدمات زیبایی مرجان کریمی" class="img-responsive" />
                                 <figcaption class="hb-slidercontent">
                                     <h2>@slide.Title</h2>
                                     <div class="hb-description">
@@ -34,16 +33,13 @@
 </div>
 
 <main id="hb-main" class="hb-main hb-haslayout">
-  
     <section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
         <div class="container">
             <div class="row">
                 <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
                     <div class="hb-sectionhead mb-50">
                         <div class="hb-sectiontitle">
-                            <h1>
-                                مرجان کریمی
-                            </h1>
+                            <h1>مرجان کریمی</h1>
                         </div>
                         <div class="hb-headcontent">
                             <h2>آموزش و خدمات تخصصی </h2>
@@ -73,7 +69,6 @@
                             </div>
                         </div>
                     }
-
                 </div>
             </div>
         </div>
@@ -85,8 +80,7 @@
                 <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
                     <div class="hb-sectionhead mb-50">
                         <div class="hb-sectiontitle">
-                            <h2>
-                                چرا مرجان کریمی؟
+                            <h2>چرا آکادمی زیبایی مرجان کریمی؟
                             </h2>
                         </div>
                     </div>
@@ -112,7 +106,6 @@
                                 </div>
                             }
 
-
                         </div>
                         <div class="hb-btnarea">
                             <a href="/about" class="hb-btn"><i class="fa fa-gift"></i>درباره مرجان کریمی</a>
@@ -122,7 +115,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <figure class="hb-whychooseus-img">
-                        <img src="~/images/banner1.png" />
+                        <img src="~/images/banner1.jpg" />
                     </figure>
                     <figure class="hb-whychooseus-img2">
                         <img src="~/images/banner3.png" />
@@ -139,15 +132,12 @@
                 <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
                     <div class="hb-sectionhead mb-50">
                         <div class="hb-sectiontitle">
-                            <h2>
-                                گالری تصاویر
-                            </h2>
+                            <h2>گالری تصاویر</h2>
                         </div>
                     </div>
                 </div>
                 <div class=" col-xs-12">
                     <div class="hb-gallery-area">
-
                         <div id="filter-masonry" class="hb-portfolio-content hb-haslayout">
                             @foreach (var gallery in Model.GalleryImages)
                             {
@@ -187,9 +177,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-7">
                     <div class="hb-sectionhead">
                         <div class="hb-sectiontitle">
-                            <h2>
-                                تماس با من
-                            </h2>
+                            <h2>تماس با من</h2>
                         </div>
                     </div>
                     <div class="hb-appointmentcontent">
@@ -212,9 +200,7 @@
                 <div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
                     <div class="hb-sectionhead">
                         <div class="hb-sectiontitle">
-                            <h2>
-                                آخرین مقالات آموزشی
-                            </h2>
+                            <h2>آخرین مقالات آموزشی</h2>
                         </div>
                     </div>
                 </div>
