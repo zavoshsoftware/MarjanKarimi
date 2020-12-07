@@ -1,91 +1,75 @@
 ﻿<header id="hb-header" class="hb-header hb-haslayout">
-    <div class="hb-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="hb-info-area">
-                        <ul class="list-unstyled hb-info">
-                            <li>
-                                <a href="mailto:info@marjankarimi.com"><i class="fa fa-envelope"></i>info@marjankarimi.com</a>
-                            </li>
-                            <li><i class="fa fa-phone"></i>021-44217662    021-44216787</li>
-                        </ul>
-                    </div>
-                    <div class="hb-socialicons-area">
-                        <ul class="hb-socialicons hb-withoutbackground list-unstyled">
-                            <li><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hb-navigationarea">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <strong class="hb-logo"><a href="/"><img src="/images/logo.png" alt="مرجان کریمی"></a></strong>
-
-                    <nav id="hb-nav" class="hb-nav">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hb-navigation" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div id="hb-navigation" class="collapse navbar-collapse hb-navigation">
-                            <ul>
-
-
-                                <li><a href="/">خانه</a></li>
-                                <li class="current-menu-item menu-item-has-mega-menu">
-                                    <a href="#">دوره های آموزشی</a>
-                                    <ul class="mega-menu-row list-unstyled sub-menu main-mega-menu row">
-                                        @foreach (var group in Model.MenuServices)
-                                        {
-                                            <li class="col-md-2 col-lg-2 col-xs-6 col-sm-6 mega-menu-title">
-                                                <a href="/category/@group.ServiceGroup.UrlParam" class="mega-submenu-title">@group.ServiceGroup.Title</a>
-                                                <ul class="mega-submenu">
-                                                    @foreach (var service in group.Services)
-                                                    {
-                                                        <li><a href="/service/@service.UrlParam">@service.Title</a></li>
-                                                    }
-                                                </ul>
-                                            </li>
-                                        }
-                                    </ul>
-                                    @*<ul class="list-unstyled sub-menu mega-menu-col">
-                                            @foreach (var service in Model.MenuServices)
-                                            {
-                                                <li><a href="/service/@service.UrlParam">@service.Title</a></li>
-                                            }
-                                        </ul>
-                                        <ul class="list-unstyled sub-menu mega-menu-col">
-                                            @foreach (var service in Model.MenuServices)
-                                            {
-                                                <li><a href="/service/@service.UrlParam">@service.Title</a></li>
-                                            }
-                                        </ul>*@
-                                </li>
-                                <li><a href="/blog">مقالات و اخبار</a></li>
-                                <li><a href="/Gallery">گالری تصاویر</a></li>
-                                <li><a href="/About">درباره ما</a></li>
-                                <li><a href="/Contact">تماس با ما</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="hb-topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="hb-info-area">
+						<ul class="list-unstyled hb-info">
+							<li>
+								<a href="mailto:info@marjankarimi.com"><i class="fa fa-envelope"></i>info@marjankarimi.com</a>
+							</li>
+							<li><i class="fa fa-phone"></i>021-44217662    09128131887</li>
+						</ul>
+					</div>
+					<div class="hb-socialicons-area">
+						<ul class="hb-socialicons hb-withoutbackground list-unstyled">
+							<li><a href="https://www.instagram.com/academy.marjankarimi/"><i class="fab fa-instagram-f"></i></a></li>
+							<li><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hb-navigationarea">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<strong class="hb-logo"><a href="/"><img src="/images/logo.png" alt="مرجان کریمی"></a></strong>
+					<nav id="hb-nav" class="hb-nav">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hb-navigation" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div id="hb-navigation" class="collapse navbar-collapse hb-navigation">
+							<ul>
+								<li><a href="/">خانه</a></li>
+								<li class="current-menu-item menu-item-has-mega-menu">
+									<a href="#">دوره های آموزشی</a>
+									<ul class="mega-menu-row list-unstyled sub-menu main-mega-menu row">
+										@foreach (var group in Model.MenuServices)
+										{
+											<li class="col-md-2 col-lg-2 col-xs-6 col-sm-6 mega-menu-title">
+												<a href="/category/@group.ServiceGroup.UrlParam" class="mega-submenu-title">@group.ServiceGroup.Title</a>
+												<ul class="mega-submenu">
+													@foreach (var service in group.Services)
+													{
+														<li><a href="/service/@service.UrlParam">@service.Title</a></li>
+													}
+												</ul>
+											</li>
+										}
+									</ul>
+								</li>
+								<li><a href="/blog">مقالات و اخبار</a></li>
+								<li><a href="/Gallery">گالری تصاویر</a></li>
+								<li><a href="/About">درباره ما</a></li>
+								<li><a href="/Contact">تماس با ما</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
-<!--************************************
-        Header End
-*************************************-->
+
 <div class="search-popup">
     <div class="holder">
         <div class="block">

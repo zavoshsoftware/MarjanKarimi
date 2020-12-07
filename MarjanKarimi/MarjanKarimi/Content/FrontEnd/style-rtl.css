@@ -281,3 +281,14 @@ a.hb-btn {
 .service .hb-blogdetails .hb-post figure {
     direction: rtl;
 }
+
+.hb-description h2, .hb-description h3, .hb-description h4 {
+    direction: rtl;
+    text-align: right;
+}
+.phone-home {
+    color: #f00;
+    font-size: 22px;
+    margin-bottom: 32px;
+
+}
