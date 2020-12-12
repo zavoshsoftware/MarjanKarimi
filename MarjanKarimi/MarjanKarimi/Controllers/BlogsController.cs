@@ -39,6 +39,7 @@ namespace MarjanKarimi.Controllers
         public ActionResult Create()
         {
             ViewBag.BlogGroupId = new SelectList(db.BlogGroups, "Id", "Title");
+            ViewBag.ServiceId = new SelectList(db.Services, "Id", "Title");
             return View();
         }
 
@@ -73,6 +74,7 @@ namespace MarjanKarimi.Controllers
             }
 
             ViewBag.BlogGroupId = new SelectList(db.BlogGroups, "Id", "Title", blog.BlogGroupId);
+            ViewBag.ServiceId = new SelectList(db.Services, "Id", "Title");
             return View(blog);
         }
 
@@ -88,6 +90,7 @@ namespace MarjanKarimi.Controllers
                 return HttpNotFound();
             }
             ViewBag.BlogGroupId = new SelectList(db.BlogGroups, "Id", "Title", blog.BlogGroupId);
+            ViewBag.ServiceId = new SelectList(db.Services, "Id", "Title", blog.ServiceId);
             return View(blog);
         }
 
@@ -123,6 +126,7 @@ namespace MarjanKarimi.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.BlogGroupId = new SelectList(db.BlogGroups, "Id", "Title", blog.BlogGroupId);
+            ViewBag.ServiceId = new SelectList(db.Services, "Id", "Title", blog.ServiceId);
             return View(blog);
         }
 

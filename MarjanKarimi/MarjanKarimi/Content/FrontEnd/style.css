@@ -9091,15 +9091,24 @@ body {
   font-weight: 900;
 }
 
-.hb-blogdetails .hb-post h4 {
-  font-size: 20px;
-  line-height: 23px;
-  color: #2d2c40;
-  margin: 0 0 20px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
+    .hb-blogdetails .hb-post h4 {
+        font-size: 20px;
+        line-height: 23px;
+        color: #2d2c40;
+        margin: 0 0 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
 
+.hb-accordian h4 {
+    font-size: 20px;
+    line-height: 23px;
+    color: #2d2c40;
+    margin: 0 0 20px;
+    font-weight: 400;
+    padding: 0 47px 0 0;
+    text-transform: capitalize;
+}
 .hb-blogdetails .hb-post blockquote {
   float: left;
   width: 100%;
@@ -10066,12 +10075,12 @@ body {
 }
 
 .service .hb-blogdetails .hb-post h4 {
-  font-size: 16px;
-  line-height: 17px;
-  padding: 0 0 0 42px;
-  padding: 0 0 23px 47px;
-  text-transform: none;
-  letter-spacing: 0.3px;
+    font-size: 16px;
+    line-height: 17px;
+    padding: 0 42px 0 0;
+    padding: 0 47px 23px 0;
+    text-transform: none;
+    letter-spacing: 0.3px;
 }
 
 .service .hb-blogdetails .hb-post h4.active {
@@ -10080,6 +10089,10 @@ body {
 
 .service .hb-post .hb-description p {
   margin: 0 0 12px;
+}
+
+.hb-accordian .hb-description p {
+    margin: 0 0 12px;
 }
 
 .service .hb-aboutusvideo {
@@ -10096,12 +10109,12 @@ body {
   line-height: 30px;
   width: 30px;
   height: 30px;
-  left: 0;
+  right: 0;
 }
 
-.service .hb-accordian {
+/*.service .hb-accordian {
   width: 53.7%;
-}
+}*/
 
 .service .hb-accordian h3 {
   font-size: 21px;
@@ -10110,7 +10123,7 @@ body {
 }
 
 .service .hb-accordian .hb-panel:last-child h4 {
-  padding: 0 0 20px 47px;
+    padding: 0 47px 0 0;
 }
 
 .service .hb-panelcontent {

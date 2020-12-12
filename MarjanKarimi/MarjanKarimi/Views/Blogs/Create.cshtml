@@ -78,6 +78,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.ServiceId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ServiceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ServiceId)
+            </div>
+        </div>
+
+        <div class="form-group">
 			<div class="col-md-2">
             </div>
             <div class="col-md-10">

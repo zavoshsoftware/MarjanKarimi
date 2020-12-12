@@ -29,5 +29,7 @@ namespace Models
         public DbSet<TextItemType> TextItemTypes { get; set; }
         public DbSet<ContactUsForm> ContactUsForms { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+
+        public System.Data.Entity.DbSet<Models.ServiceTopic> ServiceTopics { get; set; }
     }
 }

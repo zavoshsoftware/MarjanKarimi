@@ -292,3 +292,50 @@ a.hb-btn {
     margin-bottom: 32px;
 
 }
+
+.faq-price {
+    direction: rtl;
+    text-align: right;
+}
+
+.hb-accordian {
+    background-color: #ececec;
+    padding: 15px 10px;
+    min-height: 316px;
+    border-radius: 5px;
+}
+    .hb-accordian h2 {
+        font-size: 21px;
+        line-height: 26px;
+        margin: 0 0 36px;
+    }
+
+.detail-amount {
+    background-color: #ececec;
+    padding: 15px 10px;
+    border-radius: 5px;
+    min-height: 316px;
+}
+
+.detail-amount h2{
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0 0 36px;
+}
+    .detail-amount .service-amount {
+       
+        border: 1px solid #fac0f9;
+        text-align: center;
+        padding: 40px 0;
+    }
+ 
+    .detail-amount .service-amount h3{
+
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+#hb-blog {
+    direction: rtl;
+    text-align: right
+}

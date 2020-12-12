@@ -74,7 +74,14 @@
                 @Html.ValidationMessageFor(model => model.Body)
             </div>
         </div>
+	    <div class="form-group">
+		    @Html.LabelFor(model => model.AdditiveBody, new {@class = "control-label col-md-2"})
+		    <div class="col-md-10">
+			    @Html.EditorFor(model => model.AdditiveBody)
 
+			    @Html.ValidationMessageFor(model => model.AdditiveBody)
+		    </div>
+	    </div>
         <div class="form-group">
             @Html.LabelFor(model => model.IsSpecial, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -100,7 +107,22 @@
         </div>
 
 	 @Html.HiddenFor(model => model.CreationDate)
- 
+	    <div class="form-group">
+		    @Html.LabelFor(model => model.GroupAmount, new { @class = "control-label col-md-2" })
+		    <div class="col-md-10">
+			    @Html.EditorFor(model => model.GroupAmount)
+
+			    @Html.ValidationMessageFor(model => model.GroupAmount)
+		    </div>
+	    </div>
+	    <div class="form-group">
+		    @Html.LabelFor(model => model.SingleAmount, new { @class = "control-label col-md-2" })
+		    <div class="col-md-10">
+			    @Html.EditorFor(model => model.SingleAmount)
+
+			    @Html.ValidationMessageFor(model => model.SingleAmount)
+		    </div>
+	    </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })

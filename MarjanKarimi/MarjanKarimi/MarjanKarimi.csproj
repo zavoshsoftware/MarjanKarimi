@@ -959,6 +959,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServiceGroupsController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\ServiceTopicsController.cs" />
     <Compile Include="Controllers\SlidersController.cs" />
     <Compile Include="Controllers\TextItemsController.cs" />
     <Compile Include="Controllers\TextItemTypesController.cs" />
@@ -1007,6 +1008,14 @@
     <Compile Include="Migrations\202009211146291_V09.designer.cs">
       <DependentUpon>202009211146291_V09.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012122025252_V10.cs" />
+    <Compile Include="Migrations\202012122025252_V10.designer.cs">
+      <DependentUpon>202012122025252_V10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012122119597_V11.cs" />
+    <Compile Include="Migrations\202012122119597_V11.designer.cs">
+      <DependentUpon>202012122119597_V11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\DatabaseContextInitializer.cs" />
@@ -1020,7 +1029,10 @@
     <Compile Include="Models\Entities\GalleryGroup.cs" />
     <Compile Include="Models\Entities\Role.cs" />
     <Compile Include="Models\Entities\Service.cs" />
+    <Compile Include="Models\Entities\ServiceComments.cs" />
     <Compile Include="Models\Entities\ServiceGroup.cs" />
+    <Compile Include="Models\Entities\ServiceFaq.cs" />
+    <Compile Include="Models\Entities\ServiceTopic.cs" />
     <Compile Include="Models\Entities\Slider.cs" />
     <Compile Include="Models\Entities\TextItem.cs" />
     <Compile Include="Models\Entities\TextItemType.cs" />
@@ -1356,6 +1368,10 @@
     <Content Include="Views\Galleries\Index.cshtml" />
     <Content Include="Views\Galleries\List.cshtml" />
     <Content Include="Views\ServiceGroups\Details.cshtml" />
+    <Content Include="Views\ServiceTopics\Create.cshtml" />
+    <Content Include="Views\ServiceTopics\Delete.cshtml" />
+    <Content Include="Views\ServiceTopics\Edit.cshtml" />
+    <Content Include="Views\ServiceTopics\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1399,6 +1415,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009211146291_V09.resx">
       <DependentUpon>202009211146291_V09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012122025252_V10.resx">
+      <DependentUpon>202012122025252_V10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012122119597_V11.resx">
+      <DependentUpon>202012122119597_V11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

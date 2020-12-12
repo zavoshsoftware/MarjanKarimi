@@ -24,60 +24,106 @@
 </div>
 
 <main id="hb-main" class="hb-main hb-haslayout">
-    <!--************************************
-                Blog Start
-    *************************************-->
+ 
     <section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout service">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 pull-left">
-                    <div class="hb-post-area hb-blogdetails">
-                        <article class="hb-post">
-	                        <figure class="hb-postimage">
-		                     
-		                        <img src="@Model.Service.ImageUrl" alt="@Model.Service.Title"/>
-	                        </figure>
-                            <div class="hb-postcontent">
-                                <h2>@Model.Service.Title</h2>
-                            </div>
-                            <div class="hb-description">
-                                <p>
-                                   @Html.Raw(Model.Service.Body)
-                                </p>
-                             
-                            </div>
+	        <div class="row">
+		        
+		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-left">
+			        <div class="hb-post-area hb-blogdetails">
+				     
+					        <figure class="hb-postimage">
 
-                        </article>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 pull-left">
-                    <aside id="hb-sidebar" class="hb-sidebar hb-haslayout service">
-                        <div class="hb-widget hb-recentnews">
-                            <ul>
-                                <li class="active">
-                                    <a href="/service/@Model.ServiceGroup.UrlParam" class="clr-white">@Model.ServiceGroup.Title</a>
-                                    <i class="fa fa-caret-left" aria-hidden="true"></i>
-                                </li>
-                                @foreach (var service in Model.SidebarServiceGroups)
-                                {
-                                    <li>
-                                        <a href="/category/@service.UrlParam" class="clr-white">@service.Title</a>
-                                        <i class="fa fa-caret-left" aria-hidden="true"></i>
-                                    </li>
-                                }
-                               
-                            </ul>
-                        </div>
+						        <img src="@Model.Service.ImageUrl" alt="@Model.Service.Title"/>
+					        </figure>
+					      
+					      
+				         
+			        </div>
+		        </div>
+		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+							<div class="hb-post-area hb-blogdetails">
+				     
+				        <div class="hb-postcontent">
+					        <h2>@Model.Service.Title</h2>
+				        </div>
+				        <div class="hb-description">
+					        <p>
+						        @Html.Raw(Model.Service.Body)
+					        </p>
 
-                        <div class="hb-widget hb-tags content">
-                            <h3>آکادمی مرجان کریمی</h3>
-                            <p>نظرات و پیشنهادات خود را با ما در میان بگذارید</p>
-                            <a href="#" class="primary-btn hb-btn text-uppercase">تماس با ما</a>
-                        </div>
-                    </aside>
-                </div>
+				        </div>
+					      
+					      
+				         
+			        </div>
+		        </div>
+		     
 
-            </div>
+	        </div>
+					
+	        <div class="faq-price">
+		        
+		        <div class="row">
+			        <div class="col-md-6">
+				        <div id="hb-accordion" class="hb-accordian">
+					        <h3>سوالات متداول</h3>
+					        <div class="hb-panel">
+						        <h4 class="active">آیا مدرک پایان دوره معتبر می باشد </h4>
+						        <div class="hb-panelcontent" style="display: block;">
+							        <div class="hb-description">
+								        <p>پس از پایان دوره مدرک فنی حرفه ای معتبر دریافت خواهید کرد و می توانید اقدام به راه اندازی سالن کنید</p>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="hb-panel">
+						        <h4 class="">مدرس دوره کیست؟</h4>
+						        <div class="hb-panelcontent" style="display: none;">
+							        <div class="hb-description">
+								        <p>مدرس دوره ها سرکار خانم مرجان کریمی، یکی از کارآفرینان برتر ایران می باشند.</p>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="hb-panel">
+						        <h4 class="">چگونه باید در دوره ها ثبت نام کرد؟</h4>
+						        <div class="hb-panelcontent" style="display: none;">
+							        <div class="hb-description">
+								        <p>می توانید با تماس با تلفن های مجموعه برای جلسه مشاوره و ثبت نام دوره زمانی را رزرو کنید.</p>
+							        </div>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+			        <div class="col-md-6">
+				        <div class="detail-amount">
+					        <h2>هزینه @Model.Service.Title</h2>
+					        <div class="row">
+						        <div class="col-md-6">
+							        <div class="service-amount">
+								        <h3>
+									        شهریه کلاس گروهی:
+								        </h3>
+								        <span>
+									        @Model.Service.GroupAmountStr
+								        </span>
+							        </div>
+						        </div>
+						        <div class="col-md-6">
+							        <div class="service-amount">
+								        <h3>
+									        شهریه کلاس خصوصی:
+								        </h3>
+								        <span> @Model.Service.SingleAmountStr </span>
+							        </div>
+						        </div>
+					        </div>
+
+
+
+				        </div>
+			        </div>
+		        </div>
+	        </div>
         </div>
     </section>
     <!--************************************

@@ -50,6 +50,9 @@ namespace Models
 
         public virtual BlogGroup BlogGroup { get; set; }
 
+        public Guid? ServiceId { get; set; }
+        public virtual Service Service { get; set; }
+
         public virtual ICollection<BlogComment> BlogComments { get; set; }
         internal class Configuration : EntityTypeConfiguration<Blog>
         {
@@ -58,6 +61,10 @@ namespace Models
                 HasRequired(p => p.BlogGroup)
                     .WithMany(j => j.Blogs)
                     .HasForeignKey(p => p.BlogGroupId);
+
+                HasOptional(p => p.Service)
+                    .WithMany(j => j.Blogs)
+                    .HasForeignKey(p => p.ServiceId);
             }
         }
     }
