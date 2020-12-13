@@ -607,8 +607,10 @@
     <Content Include="images\gallery\gallery12.jpg" />
     <Content Include="images\gallery\gallery13.jpg" />
     <Content Include="images\heading-icon.png" />
+    <Content Include="images\icon-buulet.svg" />
     <Content Include="images\innerbanner-bg.jpg" />
     <Content Include="images\innerbanner.jpg" />
+    <Content Include="images\logo-detail.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo2.png" />
     <Content Include="images\marjankarimi.jpg" />
@@ -957,6 +959,8 @@
     <Compile Include="Controllers\GalleriesController.cs" />
     <Compile Include="Controllers\GalleryGroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageBrowserController.cs" />
+    <Compile Include="Controllers\ServiceFaqsController.cs" />
     <Compile Include="Controllers\ServiceGroupsController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\ServiceTopicsController.cs" />
@@ -1372,6 +1376,11 @@
     <Content Include="Views\ServiceTopics\Delete.cshtml" />
     <Content Include="Views\ServiceTopics\Edit.cshtml" />
     <Content Include="Views\ServiceTopics\Index.cshtml" />
+    <Content Include="Views\ServiceFaqs\Create.cshtml" />
+    <Content Include="Views\ServiceFaqs\Delete.cshtml" />
+    <Content Include="Views\ServiceFaqs\Details.cshtml" />
+    <Content Include="Views\ServiceFaqs\Edit.cshtml" />
+    <Content Include="Views\ServiceFaqs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1382,6 +1391,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\Blog\" />
+    <Folder Include="Uploads\Editor\" />
     <Folder Include="Uploads\Gallery\" />
     <Folder Include="Uploads\ServiceGroup\" />
     <Folder Include="Uploads\Service\" />

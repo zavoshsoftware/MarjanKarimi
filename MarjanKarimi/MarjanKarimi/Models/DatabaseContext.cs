@@ -31,5 +31,7 @@ namespace Models
         public DbSet<Slider> Sliders { get; set; }
 
         public System.Data.Entity.DbSet<Models.ServiceTopic> ServiceTopics { get; set; }
+
+        public System.Data.Entity.DbSet<Models.ServiceFaq> ServiceFaqs { get; set; }
     }
 }

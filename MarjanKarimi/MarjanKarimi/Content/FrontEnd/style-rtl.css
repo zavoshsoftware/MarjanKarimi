@@ -213,16 +213,18 @@ a.hb-btn {
 .color-orange {
     color: #e7411b;
 }
+
 @media (max-width: 991px) {
-    .navbar-collapse ul li a{
-        text-align:right;
+    .navbar-collapse ul li a {
+        text-align: right;
     }
+
     .navbar-collapse ul li.hb-open .sub-menu li a {
         background: #f6f1f1;
     }
-    .sub-menu
-    {
-        padding:unset;
+
+    .sub-menu {
+        padding: unset;
     }
     /*.navbar-collapse .menu-item-has-mega-menu
     {
@@ -231,36 +233,37 @@ a.hb-btn {
     .mega-submenu{
         display:none;
     }*/
-    
+
 }
-    @media (min-width: 992px) {
-        .main-mega-menu {
-            width: 1000px;
-            text-align: right;
-            padding: 20px;
-            right:-52px;
+
+@media (min-width: 992px) {
+    .main-mega-menu {
+        width: 1000px;
+        text-align: right;
+        padding: 20px;
+        right: -52px;
+    }
+
+        .main-mega-menu li {
+            padding: 5px;
         }
 
-            .main-mega-menu li {
-                padding: 5px;
-            }
-
-            .main-mega-menu .col-md-2 {
-                float: right;
-                width: 19.66667%;
-            }
-    }
-    /*.main-mega-menu :last-child {
+        .main-mega-menu .col-md-2 {
+            float: right;
+            width: 19.66667%;
+        }
+}
+/*.main-mega-menu :last-child {
         border-left:unset;
     }*/
 
-    .mega-menu-title a {
-        text-align: right;
-    }
+.mega-menu-title a {
+    text-align: right;
+}
 
-    .mega-submenu li {
-        padding: 10px 0;
-    }
+.mega-submenu li {
+    padding: 10px 0;
+}
 
 .mega-submenu-title {
     color: #864386 !important;
@@ -286,11 +289,11 @@ a.hb-btn {
     direction: rtl;
     text-align: right;
 }
+
 .phone-home {
     color: #f00;
     font-size: 22px;
     margin-bottom: 32px;
-
 }
 
 .faq-price {
@@ -304,6 +307,7 @@ a.hb-btn {
     min-height: 316px;
     border-radius: 5px;
 }
+
     .hb-accordian h2 {
         font-size: 21px;
         line-height: 26px;
@@ -317,25 +321,80 @@ a.hb-btn {
     min-height: 316px;
 }
 
-.detail-amount h2{
-    font-size: 21px;
-    line-height: 26px;
-    margin: 0 0 36px;
-}
+    .detail-amount h2 {
+        font-size: 21px;
+        line-height: 26px;
+        margin: 0 0 36px;
+    }
+
     .detail-amount .service-amount {
-       
         border: 1px solid #fac0f9;
         text-align: center;
         padding: 40px 0;
     }
- 
-    .detail-amount .service-amount h3{
 
-        font-size: 22px;
-        line-height: 34px;
-    }
+        .detail-amount .service-amount h3 {
+            font-size: 22px;
+            line-height: 34px;
+        }
 
 #hb-blog {
     direction: rtl;
     text-align: right
+}
+
+.service-topic {
+    margin-top: 30px;
+    background-color: #ececec;
+    padding: 15px 10px;
+    border-radius: 5px;
+    min-height: 316px;
+}
+
+    .service-topic li {
+        float: right;
+        width: 50%;
+        list-style: none
+    }
+        .service-topic li:before {
+            content: '';
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            -webkit-mask: url('/images/icon-buulet.svg');
+            mask: url('/images/icon-buulet.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+            margin-top: 5px;
+            -webkit-mask-size: cover;
+            background-color: #fb85e2;
+            mask-size: cover;
+        }
+ 
+.service-desc {
+    background-color: #ececec;
+    padding: 20px 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.service-desc h2{
+    font-size: 25px;
+    color: #fb85e2
+}
+
+
+
+
+@media(max-width:767px) {
+
+    .detail-amount {
+        margin-top: 375px;
+    }
+
+    .service-topic li {
+        float: none;
+        width: 100%;
+    }
 }

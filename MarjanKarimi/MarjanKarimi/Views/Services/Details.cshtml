@@ -1,159 +1,192 @@
 ﻿@model ViewModels.ServiceDetailViewModel
 @{
-    ViewBag.Title = Model.Service.Title;
-         Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
-    ViewBag.Canonical = "http://www.marjankarimi.com/service/"   + Model.Service.UrlParam;
+		ViewBag.Title = Model.Service.Title;
+		Layout = "~/Views/Shared/FrontEnd/_FrontEndLayout.cshtml";
+		ViewBag.Canonical = "http://www.marjankarimi.com/service/" + Model.Service.UrlParam;
 }
 
 <div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="hb-innerbanner-area service">
-                    <div class="hb-bannarheading">
-                        <h1>@Model.Service.Title</h1>
-                    </div>
-                    <ul class="hb-breadcrumb">
-                        <li><a href="/">صفحه اصلی</a></li>
-                        <li>@Model.Service.Title</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="hb-innerbanner-area service">
+					<div class="hb-bannarheading">
+						<h1>@Model.Service.Title</h1>
+					</div>
+					<ul class="hb-breadcrumb">
+						<li><a href="/">صفحه اصلی</a></li>
+						<li>@Model.Service.Title</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <main id="hb-main" class="hb-main hb-haslayout">
- 
-    <section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout service">
-        <div class="container">
-	        <div class="row">
-		        
-		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-left">
-			        <div class="hb-post-area hb-blogdetails">
-				     
-					        <figure class="hb-postimage">
 
-						        <img src="@Model.Service.ImageUrl" alt="@Model.Service.Title"/>
-					        </figure>
-					      
-					      
-				         
-			        </div>
-		        </div>
-		        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-							<div class="hb-post-area hb-blogdetails">
-				     
-				        <div class="hb-postcontent">
-					        <h2>@Model.Service.Title</h2>
-				        </div>
-				        <div class="hb-description">
-					        <p>
-						        @Html.Raw(Model.Service.Body)
-					        </p>
+	<section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout service">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-left">
+					<div class="hb-post-area hb-blogdetails">
+						<figure class="hb-postimage">
+							<img src="@Model.Service.ImageUrl" alt="@Model.Service.Title" />
+						</figure>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+					<div class="hb-post-area hb-blogdetails">
+						<div class="hb-postcontent">
+							<h2>@Model.Service.Title</h2>
+						</div>
+						<div class="hb-description">
+							<p>@Html.Raw(Model.Service.Body)</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-				        </div>
-					      
-					      
-				         
-			        </div>
-		        </div>
-		     
+			<div class="faq-price">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div id="hb-accordion" class="hb-accordian">
+							<h3>سوالات متداول @Model.Service.Title</h3>
+							@if (Model.ServiceFaqs.Any())
+							{
+								int i = 1;
+								foreach (var faq in Model.ServiceFaqs)
+								{
+									if (i == 1)
+									{
+													<div class="hb-panel">
+														<h4 class="active">@faq.Question </h4>
+														<div class="hb-panelcontent" style="display: block;">
+															<div class="hb-description">
+																<p>@faq.Answer</p>
+															</div>
+														</div>
+													</div>
+									}
+									else
+									{
+													<div class="hb-panel">
+														<h4 class="">@faq.Question </h4>
+														<div class="hb-panelcontent" style="display: none;">
+															<div class="hb-description">
+																<p>@faq.Answer</p>
+															</div>
+														</div>
+													</div>
+									}
+								}
+							}
+							else
+							{
+									<div class="hb-panel">
+										<h4 class="active">آیا بعد از اتمام این دوره می توانیم سالن زیبایی تاسیس کنیم؟</h4>
+										<div class="hb-panelcontent" style="display: block;">
+											<div class="hb-description">
+												<p>یکی از شرایط تاسیس آرایشگاه زنانه، داشتن مدرک آرایش و زیبایی از سازمان فنی و حرفه ای کشور میباشد . که شما با گذراندن این دوره مدرک رسمی فنی حرفه ای دریاف می کنید.</p>
+											</div>
+										</div>
+									</div>
+									<div class="hb-panel">
+										<h4 class="">مدرس دوره کیست؟</h4>
+										<div class="hb-panelcontent" style="display: none;">
+											<div class="hb-description">
+												<p>مدرس دوره ها سرکار خانم مرجان کریمی، یکی از کارآفرینان برتر ایران می باشند.</p>
+											</div>
+										</div>
+									</div>
+									<div class="hb-panel">
+										<h4 class="">چگونه باید در دوره ها ثبت نام کرد؟</h4>
+										<div class="hb-panelcontent" style="display: none;">
+											<div class="hb-description">
+												<p>می توانید با تماس با تلفن های مجموعه برای جلسه مشاوره و ثبت نام دوره زمانی را رزرو کنید.</p>
+											</div>
+										</div>
+									</div>
+							}
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="detail-amount">
+							<h2>هزینه @Model.Service.Title</h2>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="service-amount">
+										<h3>شهریه کلاس گروهی:</h3>
+										<span>@Model.Service.GroupAmountStr</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="service-amount">
+										<h3>شهریه کلاس خصوصی:</h3>
+										<span> @Model.Service.SingleAmountStr </span>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="service-topic clearfix">
+				<div calss="row">
+					<div class="col-md-10 col-sm-12">
+						<h3>سرفصل های @Model.Service.Title</h3>
+						<ul>
+							@foreach (var topic in Model.ServiceTopics)
+							{
+									<li>@topic.Title</li>
+							}
+						</ul>
+					</div>
+					<div class="col-md-2 col-sm-12 hidden-xs hidden-sm">
+						<img src="~/images/logo-detail.jpg" />
+					</div>
+				</div>
+			</div>
+			@if (!string.IsNullOrEmpty(Model.Service.AdditiveBody))
+			{
+					<div class="service-desc clearfix">
+						<div calss="row">
+							<div class="col-md-12 col-sm-12">
+								@Html.Raw(Model.Service.AdditiveBody)
+							</div>
+						</div>
+					</div>
+			}
+		</div>
+	</section>
 
-	        </div>
-					
-	        <div class="faq-price">
-		        
-		        <div class="row">
-			        <div class="col-md-6">
-				        <div id="hb-accordion" class="hb-accordian">
-					        <h3>سوالات متداول</h3>
-					        <div class="hb-panel">
-						        <h4 class="active">آیا مدرک پایان دوره معتبر می باشد </h4>
-						        <div class="hb-panelcontent" style="display: block;">
-							        <div class="hb-description">
-								        <p>پس از پایان دوره مدرک فنی حرفه ای معتبر دریافت خواهید کرد و می توانید اقدام به راه اندازی سالن کنید</p>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="hb-panel">
-						        <h4 class="">مدرس دوره کیست؟</h4>
-						        <div class="hb-panelcontent" style="display: none;">
-							        <div class="hb-description">
-								        <p>مدرس دوره ها سرکار خانم مرجان کریمی، یکی از کارآفرینان برتر ایران می باشند.</p>
-							        </div>
-						        </div>
-					        </div>
-					        <div class="hb-panel">
-						        <h4 class="">چگونه باید در دوره ها ثبت نام کرد؟</h4>
-						        <div class="hb-panelcontent" style="display: none;">
-							        <div class="hb-description">
-								        <p>می توانید با تماس با تلفن های مجموعه برای جلسه مشاوره و ثبت نام دوره زمانی را رزرو کنید.</p>
-							        </div>
-						        </div>
-					        </div>
-				        </div>
-			        </div>
-			        <div class="col-md-6">
-				        <div class="detail-amount">
-					        <h2>هزینه @Model.Service.Title</h2>
-					        <div class="row">
-						        <div class="col-md-6">
-							        <div class="service-amount">
-								        <h3>
-									        شهریه کلاس گروهی:
-								        </h3>
-								        <span>
-									        @Model.Service.GroupAmountStr
-								        </span>
-							        </div>
-						        </div>
-						        <div class="col-md-6">
-							        <div class="service-amount">
-								        <h3>
-									        شهریه کلاس خصوصی:
-								        </h3>
-								        <span> @Model.Service.SingleAmountStr </span>
-							        </div>
-						        </div>
-					        </div>
-
-
-
-				        </div>
-			        </div>
-		        </div>
-	        </div>
-        </div>
-    </section>
-    <!--************************************
-                Blog End
-    *************************************-->
-    <section id="hb-appointment" class="hb-appointment hb-sectionspace hb-haslayout price-list bg-owner">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-5">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-7">
-                    <div class="hb-sectionhead">
-                        <div class="hb-sectiontitle">
-                            <h2>
-                                <span>مرجان کریمی</span>
-                                رزرو وقت
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="hb-appointmentcontent">
-                        <h3>برای رزرو وقت و تماس با ما با شماره های زیر در تماس باشید</h3>
-                        <div class="hb-description">
-                            <p class="text-center">شماره تماس : <strong>44217662-021</strong></p>
-                        </div>
-                        <div class="hb-btnarea">
-                            <a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn">اینستاگرام ما را دنبال کنید</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section id="hb-appointment" class="hb-appointment hb-sectionspace hb-haslayout price-list bg-owner">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-5">
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-7">
+					<div class="hb-sectionhead">
+						<div class="hb-sectiontitle">
+							<h2>
+								<span>مرجان کریمی</span>
+								رزرو وقت
+							</h2>
+						</div>
+					</div>
+					<div class="hb-appointmentcontent">
+						<h3>جهت مشاوره برای شرکت در @Model.Service.Title با تلفن های زیر تماس بگیرید</h3>
+						<div class="hb-description">
+							<p class="text-center">شماره تماس : <strong>44217662-021  و  09128131887</strong></p>
+						</div>
+						<div class="hb-btnarea">
+							<a href="https://www.instagram.com/academy.marjankarimi/" class="hb-btn" target="_blank" rel="nofollow noreferrer">اینستاگرام ما را دنبال کنید</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>

@@ -206,13 +206,16 @@ namespace MarjanKarimi.Controllers
                 return RedirectPermanent("/");
             ServiceDetailViewModel serviceDetail = new ServiceDetailViewModel()
             {
-               
                 Service = service,
+
                 ServiceGroup = db.ServiceGroups.Find(service.ServiceGroupId),
-                SidebarServiceGroups = db.ServiceGroups.Where(c => c.IsDeleted == false && c.IsActive && c.Id != service.ServiceGroupId).OrderBy(c => c.Order).ToList(),
 
-                
-
+                ServiceTopics =
+                    db.ServiceTopics.Where(c => c.ServiceId == service.Id&& c.IsDeleted == false && c.IsActive)
+                        .OrderBy(c => c.Order).ToList(),
+                ServiceFaqs = 
+                    db.ServiceFaqs.Where(c => c.ServiceId == service.Id&& c.IsDeleted == false && c.IsActive)
+                        .OrderBy(c => c.Order).ToList(),
             };
 
             return View(serviceDetail);
