@@ -611,6 +611,7 @@
     <Content Include="images\innerbanner-bg.jpg" />
     <Content Include="images\innerbanner.jpg" />
     <Content Include="images\logo-detail.jpg" />
+    <Content Include="images\logo-light.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo2.png" />
     <Content Include="images\marjankarimi.jpg" />

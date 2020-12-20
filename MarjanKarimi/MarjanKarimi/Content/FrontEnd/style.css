@@ -5938,7 +5938,7 @@ body {
 			Footer Style					
 ============================================= */
 .hb-footer {
-  background: #f5f5f9;
+    background: #fff;
 }
 
 /* =============================================
@@ -7525,7 +7525,7 @@ body {
 			Blog Style					
 ============================================= */
 .hb-blog {
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .hb-blog.v4 .hb-post {

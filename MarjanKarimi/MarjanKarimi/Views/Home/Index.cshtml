@@ -32,6 +32,47 @@
 </div>
 
 <main id="hb-main" class="hb-main hb-haslayout">
+<section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
+	<div class="container">
+		<div class="row">
+			<div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
+				<div class="hb-sectionhead mb-50">
+					<div class="hb-sectiontitle">
+						<h1>مرجان کریمی</h1>
+					</div>
+					<div class="hb-headcontent">
+						<h2>آموزش و خدمات تخصصی </h2>
+						<div class="hb-description">
+							<p>مرجان کریمی موسس آکادمی زیبایی مرجان کریمی، دارای مجوز رسمی از سازمان فنی حرفه ای</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="hb-servicesslider" class="hb-servicesslider hb-haslayout owl-carousel owl-theme">
+				@foreach (var service in Model.HomeServiceGroups)
+				{
+					<div class="item">
+						<div class="hb-servicebox bg-grey sm-round">
+							<figure class="hb-serviceimg">
+								<img src="@service.ImageUrl" alt="images description" class="img-responsive">
+								<figcaption class="hb-imagecontent">
+									<a href="/category/@service.UrlParam" class="hb-btn">اطلاعات بیشتر</a>
+								</figcaption>
+							</figure>
+							<div class="hb-servicecontent">
+								<h3 class="hb-headingtree">@service.Title</h3>
+								<div class="hb-description">
+									<p>@service.Summery</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
 	<section id="hb-whychooseus" class="hb-whychooseus v4 hb-sectionspace hb-bg hb-haslayout">
 		<div class="container">
 			<div class="row">
@@ -53,16 +94,17 @@
 						<ul class="list-unstyled hb-whychooseus-list">
 							@foreach (var text in Model.WhyChooseus)
 							{
-									<li>@text.Title</li>
+								<li>@text.Title</li>
 							}
 						</ul>
 						<div id="hb-statisticscounters" class="hb-statisticscounters">
 							@foreach (var text in Model.Numbers)
 							{
-									<div class="hb-counter">
-										<h3><span data-from="0" data-to="2000" data-speed="2000" data-refresh-interval="50">@Html.Raw(text.Body)</span></h3>
-										<h4>@text.Title</h4>
-									</div>
+								<div class="hb-counter">
+									<h3><span data-from="0" data-to="2000" data-speed="2000" data-refresh-interval="50">@Html.Raw(text.Body)</span>
+									</h3>
+									<h4>@text.Title</h4>
+								</div>
 							}
 
 						</div>
@@ -74,10 +116,10 @@
 
 				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 					<figure class="hb-whychooseus-img">
-						<img src="~/images/banner1.jpg" />
+						<img src="~/images/banner1.jpg"/>
 					</figure>
 					<figure class="hb-whychooseus-img2">
-						<img src="~/images/banner3.png" />
+						<img src="~/images/banner3.png"/>
 					</figure>
 				</div>
 
@@ -85,46 +127,6 @@
 		</div>
 	</section>
 
-	<section id="hb-services" class="hb-services ver-4 v2 hb-sectionspace hb-haslayout">
-		<div class="container">
-			<div class="row">
-				<div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">
-					<div class="hb-sectionhead mb-50">
-						<div class="hb-sectiontitle">
-							<h1>مرجان کریمی</h1>
-						</div>
-						<div class="hb-headcontent">
-							<h2>آموزش و خدمات تخصصی </h2>
-							<div class="hb-description">
-								<p>مرجان کریمی موسس آکادمی زیبایی مرجان کریمی، دارای مجوز رسمی از سازمان فنی حرفه ای</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="hb-servicesslider" class="hb-servicesslider hb-haslayout owl-carousel owl-theme">
-					@foreach (var service in Model.HomeServiceGroups)
-					{
-						<div class="item">
-							<div class="hb-servicebox bg-grey sm-round">
-								<figure class="hb-serviceimg">
-									<img src="@service.ImageUrl" alt="images description" class="img-responsive">
-									<figcaption class="hb-imagecontent">
-										<a href="/category/@service.UrlParam" class="hb-btn">اطلاعات بیشتر</a>
-									</figcaption>
-								</figure>
-								<div class="hb-servicecontent">
-									<h3 class="hb-headingtree">@service.Title</h3>
-									<div class="hb-description">
-										<p>@service.Summery</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					}
-				</div>
-			</div>
-		</div>
-	</section>
 
 
 
@@ -168,7 +170,7 @@
         </div>
     </section>*@
 
-	<section id="hb-appointment" class="hb-appointment v4 hb-sectionspace hb-haslayout bg-grey">
+	<section id="hb-appointment" class="hb-appointment v4 hb-sectionspace hb-haslayout">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-5">
@@ -207,7 +209,7 @@
 		</div>
 	</section>
 
-	<section id="hb-blog" class="hb-blog v4 hb-sectionspace hb-haslayout">
+	<section id="hb-blog" class="hb-blog v4 hb-sectionspace hb-haslayout bg-grey">
 		<div class="container">
 			<div class="row">
 				<div class=" col-xs-12 col-sm-12 col-sm-offset-0 col-md-8 col-md-offset-2">

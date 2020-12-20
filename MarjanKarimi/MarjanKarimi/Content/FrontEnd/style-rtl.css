@@ -81,7 +81,7 @@ a.hb-btn {
 }
 
 .hb-logo {
-    padding: 4px 0;
+    padding: 14px 0;
 }
 
 .hb-breadcrumb {
@@ -397,4 +397,13 @@ a.hb-btn {
         float: none;
         width: 100%;
     }
+}
+
+.hb-socialicons-area {
+    border: 1px solid #fff;
+    padding: 1px 15px;
+}
+
+.hb-socialicons-area a{
+   color: #fff;
 }
