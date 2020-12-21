@@ -321,7 +321,7 @@ jQuery(document).on('ready', function() {
 		nav:true,
 		loop:true,
 		dots: false,
-		autoplay: false,
+		autoplay: true,
 		dotsClass: 'hb-sliderdots',
 		navClass: ['hb-prev', 'hb-next'],
 		navContainerClass: 'hb-slidernav',
@@ -329,6 +329,31 @@ jQuery(document).on('ready', function() {
 		responsive:{
 			0:{
 				items: 1,
+			},
+			480:{
+				items: 2,
+			},
+			768:{
+				items: 3,
+			},
+			1200:{
+				items: 4,
+			}
+		}
+    });
+    $('#hb-servicesslider2').owlCarousel({
+	 	items: 4,
+		nav:true,
+		loop:true,
+		dots: false,
+		autoplay: true,
+		dotsClass: 'hb-sliderdots',
+		navClass: ['hb-prev', 'hb-next'],
+		navContainerClass: 'hb-slidernav',
+		navText: ['<span class="icon-chevron-left"></span>', '<span class="icon-chevron-right"></span>'],
+		responsive:{
+			0:{
+				items: 2,
 			},
 			480:{
 				items: 2,

@@ -14,6 +14,7 @@ namespace ViewModels
         public List<Blog> HomeBlogs { get; set; }
         public List<TextItem> WhyChooseus { get; set; }
         public List<TextItem> Numbers { get; set; }
+        public List<Service> HomeServices { get; set; }
 
     }
 }

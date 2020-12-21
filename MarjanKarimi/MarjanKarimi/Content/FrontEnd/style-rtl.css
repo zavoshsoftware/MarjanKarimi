@@ -407,3 +407,24 @@ a.hb-btn {
 .hb-socialicons-area a{
    color: #fff;
 }
+
+#hb-servicesslider2  img {
+    width: 100%;
+}
+#hb-servicesslider2 .feature-desc  {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#hb-servicesslider2 .feature-desc a {
+    color: #000;
+    font-size: 1.7rem !important;
+}
+    #hb-servicesslider2 .feature-desc p {
+        direction: rtl;
+        font-size: 1.35rem !important;
+       min-height: 90px;
+        padding: 0 10px;
+    }
+#hb-servicesslider2 .single-feature {
+    border: 1px solid #ddd;
+}

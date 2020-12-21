@@ -22,7 +22,7 @@ namespace MarjanKarimi.Controllers
                 Sliders = db.Sliders.Where(current => current.IsActive && !current.IsDeleted).OrderByDescending(current => current.CreationDate).ToList(),
                 WhyChooseus = db.TextItems.Where(current => current.IsActive && !current.IsDeleted && current.TextItemType.UrlParam.ToLower() == "homewhymarjan").ToList(),
                 Numbers = db.TextItems.Where(current => current.IsActive && !current.IsDeleted && current.TextItemType.UrlParam.ToLower() == "homenumbers").ToList(),
-
+                HomeServices = db.Services.Where(c=>c.IsSpecial&&c.IsDeleted==false&&c.IsActive).Take(8).ToList()
             };
             return View(viewModel);
         }
