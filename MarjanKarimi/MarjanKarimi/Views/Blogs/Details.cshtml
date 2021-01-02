@@ -6,176 +6,185 @@
 }
 
 
-<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="hb-innerbanner-area service">
-                    <div class="hb-bannarheading">
-                        <h1>@Model.Blog.Title</h1>
-                    </div>
-                    <ul class="hb-breadcrumb">
-                        <li><a href="/">صفحه اصلی</a></li>
-                        <li>
-                            @Model.Blog.Title
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout" style=" background-image: url('/images/headers/2.jpg');">
+	<div class="overlay-main"></div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="hb-innerbanner-area service">
+					<div class="hb-bannarheading">
+						<h1>@Model.Blog.Title</h1>
+					</div>
+					<ul class="hb-breadcrumb">
+						<li><a href="/">صفحه اصلی</a></li>
+						<li><a href="/blog">مقالات</a></li>
+						<li>
+							@Model.Blog.Title
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <main id="hb-main" class="hb-main hb-haslayout">
 
     <section id="hb-blog" class="hb-blog hb-sectionspace hb-haslayout">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 pull-right">
-                    <aside id="hb-sidebar" class="hb-sidebar hb-haslayout">
-                        <div class="hb-widget hb-recentnews">
-                            <div class="hb-widgettitle">
-                                <h3>جدیدترین مقالات</h3>
-                            </div>
-                            <ul>
-                                @foreach (var blog in Model.RecentBlogs)
-                                {
-                                <li>
-                                    <a href="/blog/@blog.UrlParam"><h4>@blog.Title</h4></a>
-                                    <div class="hb-postmeta">
-                                        <span>@blog.CreationDate.ToShortDateString()</span>
-                                    </div>
-                                </li>
-                                }
-                            </ul>
-                        </div>
-                        <div class="hb-widget hb-recentnews">
-                            <div class="hb-widgettitle">
-                                <h3>پربازدیدترین مقالات</h3>
-                            </div>
-                            <ul>
-                                @foreach (var blog in Model.PopularBlogs)
-                                {
-                                    <li>
-                                        <a href="/blog/@blog.UrlParam"><h4>@blog.Title</h4></a>
-                                        <div class="hb-postmeta">
-                                            <span>@blog.CreationDate.ToShortDateString()</span>
-                                        </div>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+	        <div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 pull-left">
+							<div class="hb-post-area hb-blogdetails">
+								<article class="hb-post">
+									<figure class="hb-postimage">
+										<img src="@Model.Blog.ImageUrl" alt="image description">
+									</figure>
+									<div class="hb-postcontent">
+										<h2>@Model.Blog.Title</h2>
+										<ul class="hb-postmeta">
+											<li>مرجان کریمی</li>
+											<li>@Model.Blog.CreationDate.ToShortDateString()</li>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 pull-left">
-                    <div class="hb-post-area hb-blogdetails">
-                        <article class="hb-post">
-                            <figure class="hb-postimage">
-                                <img src="@Model.Blog.ImageUrl" alt="image description">
-                            </figure>
-                            <div class="hb-postcontent">
-                                <h2>@Model.Blog.Title</h2>
-                                <ul class="hb-postmeta">
-                                    <li>مرجان کریمی</li>
-                                    <li>@Model.Blog.CreationDate.ToShortDateString()</li>
+										</ul>
+									</div>
+									<div class="hb-description">
+										<p>
+											@Html.Raw(Model.Blog.Body)
+										</p>
+									</div>
 
-                                </ul>
-                            </div>
-                            <div class="hb-description">
-                                <p>
-                                   @Html.Raw(Model.Blog.Body)
-                                </p>
-                            </div>
+									<div class="hb-tags-area">
 
-                            <div class="hb-tags-area">
+										<div class="hb-socialshare">
+											<ul>
+												<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+												<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+												<li><a href="#"><i class="fas fa-rss"></i></a></li>
+												<li><a href="#"><i class="fa fa-heart"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<div class="hb-comments-area text-right">
+									<div class="hb-comment-heading">
+										<h2>@ViewBag.commentCount نظر</h2>
+									</div>
+									<div class="hb-comments-box">
+										@foreach (var comment in Model.Comments)
+										{
+												<div class="hb-comment">
+													<figure class="hb-commentimg">
+														<img src="~/images/avatar.png" alt="images description" />
+													</figure>
+													<div class="hb-comment-content">
+														<span class="hb-comment-date">
+															<em>@comment.CreationDate.ToShortDateString()</em>
+															@comment.Name
+														</span>
+														<div class="hb-description">
+															<p>@Html.Raw(comment.Message)</p>
+														</div>
+													</div>
+												</div>
+if (!string.IsNullOrEmpty(comment.Response))
+											{
+														<div class="hb-comment hb-paddingleft">
+															<figure class="hb-commentimg">
+																<img src="~/images/avatar.png" alt="images description" />
+															</figure>
+															<div class="hb-comment-content">
+																<span class="hb-comment-date">
+																	<em>@comment.CreationDate.ToShortDateString()</em>
+																	مرجان کریمی
+																</span>
+																<div class="hb-description">
+																	<p>@Html.Raw(comment.Response)</p>
+																</div>
+															</div>
+														</div>
+}
+										}
+									</div>
+								</div>
+								<div class="hb-formarea text-right">
+									<div class="hb-form-heading">
+										<h2>نظر شما</h2>
+									</div>
+									<div class="row">
+										<div class="hb-formtheme hb-commentform">
+											<div class="col-xs-12 col-sm-12 col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" id="commentName" placeholder="نام">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-12 col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" id="commentEmail" placeholder="ایمیل">
+												</div>
+											</div>
 
-                                <div class="hb-socialshare">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-rss"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                        <div class="hb-comments-area text-right">
-                            <div class="hb-comment-heading">
-                                <h2>2 نظر</h2>
-                            </div>
-                            <div class="hb-comments-box">
-                                @foreach (var comment in Model.Comments)
-                                {
-                                <div class="hb-comment">
-                                    <figure class="hb-commentimg">
-                                        <img src="~/images/avatar.png" alt="images description" />
-                                    </figure>
-                                    <div class="hb-comment-content">
-                                        <span class="hb-comment-date">
-                                            <em>@comment.CreationDate.ToShortDateString()</em>
-                                            @comment.Name
-                                        </span>
-                                        <div class="hb-description">
-                                            <p>@Html.Raw(comment.Message)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                    if (!string.IsNullOrEmpty(comment.Response))
-                                    {
-                                        <div class="hb-comment hb-paddingleft">
-                                            <figure class="hb-commentimg">
-                                                <img src="~/images/avatar.png" alt="images description" />
-                                            </figure>
-                                            <div class="hb-comment-content">
-                                                <span class="hb-comment-date">
-                                                    <em>@comment.CreationDate.ToShortDateString()</em>
-                                                    مرجان کریمی
-                                                </span>
-                                                <div class="hb-description">
-                                                    <p>@Html.Raw(comment.Response)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    }
-                                }
-                            </div>
-                        </div>
-                        <div class="hb-formarea text-right">
-                            <div class="hb-form-heading">
-                                <h2>نظر شما</h2>
-                            </div>
-                            <div class="row">
-                                <form class="hb-formtheme hb-commentform">
-                                    <div class="col-xs-12 col-sm-12 col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="نام">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="Email" placeholder="ایمیل">
-                                        </div>
-                                    </div>
+											<div class="col-xs-12 col-sm-12">
+												<div class="form-group">
+													<textarea class="form-control" id="commentBody" placeholder="پیغام"></textarea>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-12">
+												<div class="form-group">
+													<button type="button" class="hb-btn" onclick="SubmitBlogComment('@Model.Blog.Id');">ارسال</button>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-12">
+												<p class="alert alert-danger" id="errorDivBlog"></p>
+												<p class="alert alert-success" id="SuccessDivBlog">نظر شما با موفقیت ثبت شد و پس از تایید مدیر سایت نمایش داده خواهد شد.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-                                    <div class="col-xs-12 col-sm-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" placeholder="پیغام"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12">
-                                        <div class="form-group">
-                                            <button type="submit" class="hb-btn">ارسال</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+		        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 pull-right">
+			        <aside id="hb-sidebar" class="hb-sidebar hb-haslayout">
+				        <div class="hb-widget hb-recentnews">
+					        <div class="hb-widgettitle">
+						        <h3>جدیدترین مقالات</h3>
+					        </div>
+					        <ul>
+						        @foreach (var blog in Model.RecentBlogs)
+						        {
+							        <li>
+								        <a href="/blog/@blog.UrlParam"><h4>@blog.Title</h4></a>
+								        <div class="hb-postmeta">
+									        <span>@blog.CreationDate.ToShortDateString()</span>
+								        </div>
+							        </li>
+						        }
+					        </ul>
+				        </div>
+				        <div class="hb-widget hb-recentnews">
+					        <div class="hb-widgettitle">
+						        <h3>پربازدیدترین مقالات</h3>
+					        </div>
+					        <ul>
+						        @foreach (var blog in Model.PopularBlogs)
+						        {
+							        <li>
+								        <a href="/blog/@blog.UrlParam"><h4>@blog.Title</h4></a>
+								        <div class="hb-postmeta">
+									        <span>@blog.CreationDate.ToShortDateString()</span>
+								        </div>
+							        </li>
+						        }
+					        </ul>
+				        </div>
+			        </aside>
+		        </div>
 
-            </div>
+
+
+	        </div>
         </div>
     </section>
 

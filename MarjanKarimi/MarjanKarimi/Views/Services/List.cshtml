@@ -7,21 +7,22 @@
 	 
 	}
 
-<div class="breadcrumbs text-center">
+<div id="hb-innerbanner" class="hb-innerbanner hb-haslayout" style=" background-image: url('/images/headers/4.jpg');">
+	<div class="overlay-main"></div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="breadcrumbs-title">
-					<h2>@Model.ServiceGroup.Title</h2>
+			<div class="col-xs-12">
+				<div class="hb-innerbanner-area service">
+					<div class="hb-bannarheading">
+						<h1>@Model.ServiceGroup.Title</h1>
+					</div>
+					<ul class="hb-breadcrumb">
+						<li><a href="/">صفحه اصلی</a></li>
+						<li>@Model.ServiceGroup.Title</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="breadcrumbs-menu">
-		<ul>
-			<li><a href="/">خانه <span>//</span></a></li>
-			<li>@Model.ServiceGroup.Title</li>
-		</ul>
 	</div>
 </div>
 

@@ -206,7 +206,7 @@ namespace MarjanKarimi.Controllers
                 Comments = db.BlogComments.Where(c => c.IsDeleted == false && c.IsActive && c.BlogId == blog.Id).ToList()
 
             };
-
+            ViewBag.commentCount = blogDetail.Comments.Count();
             return View(blogDetail);
         }
     }

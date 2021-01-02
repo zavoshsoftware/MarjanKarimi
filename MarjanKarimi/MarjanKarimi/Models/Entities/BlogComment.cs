@@ -29,6 +29,8 @@ namespace Models
         [Column(TypeName = "ntext")]
         [UIHint("RichText")]
         public string Response { get; set; }
+
+        public DateTime? ResponseDate { get; set; }
         public Guid BlogId { get; set; }
         public virtual Blog Blog { get; set; }
 

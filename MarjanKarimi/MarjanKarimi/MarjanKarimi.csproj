@@ -606,6 +606,15 @@
     <Content Include="images\gallery\gallery11.jpg" />
     <Content Include="images\gallery\gallery12.jpg" />
     <Content Include="images\gallery\gallery13.jpg" />
+    <Content Include="images\headers\1.jpg" />
+    <Content Include="images\headers\2.jpg" />
+    <Content Include="images\headers\3.jpg" />
+    <Content Include="images\headers\4.jpg" />
+    <Content Include="images\headers\5.jpg" />
+    <Content Include="images\headers\6.jpg" />
+    <Content Include="images\headers\7.jpg" />
+    <Content Include="images\headers\8.jpg" />
+    <Content Include="images\headers\9.jpg" />
     <Content Include="images\heading-icon.png" />
     <Content Include="images\icon-buulet.svg" />
     <Content Include="images\innerbanner-bg.jpg" />
@@ -660,6 +669,7 @@
     <Content Include="Scripts\FrontEnd\countdown.js" />
     <Content Include="Scripts\FrontEnd\countTo.js" />
     <Content Include="Scripts\FrontEnd\fancybox.js" />
+    <Content Include="Scripts\FrontEnd\function.js" />
     <Content Include="Scripts\FrontEnd\html5lightbox.js" />
     <Content Include="Scripts\FrontEnd\isotop.js" />
     <Content Include="Scripts\FrontEnd\isotope.pkgd.js" />
@@ -954,6 +964,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogCommentsController.cs" />
     <Compile Include="Controllers\BlogGroupsController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\ContactUsFormsController.cs" />
@@ -1020,6 +1031,10 @@
     <Compile Include="Migrations\202012122119597_V11.cs" />
     <Compile Include="Migrations\202012122119597_V11.designer.cs">
       <DependentUpon>202012122119597_V11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101021719298_V12.cs" />
+    <Compile Include="Migrations\202101021719298_V12.designer.cs">
+      <DependentUpon>202101021719298_V12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
@@ -1382,6 +1397,11 @@
     <Content Include="Views\ServiceFaqs\Details.cshtml" />
     <Content Include="Views\ServiceFaqs\Edit.cshtml" />
     <Content Include="Views\ServiceFaqs\Index.cshtml" />
+    <Content Include="Views\BlogComments\Create.cshtml" />
+    <Content Include="Views\BlogComments\Delete.cshtml" />
+    <Content Include="Views\BlogComments\Details.cshtml" />
+    <Content Include="Views\BlogComments\Edit.cshtml" />
+    <Content Include="Views\BlogComments\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1432,6 +1452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012122119597_V11.resx">
       <DependentUpon>202012122119597_V11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101021719298_V12.resx">
+      <DependentUpon>202101021719298_V12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

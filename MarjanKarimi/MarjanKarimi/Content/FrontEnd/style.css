@@ -7538,7 +7538,7 @@ body {
 }
 
 .hb-blog.v4 .hb-postcontent {
-  padding: 30px 0;
+  padding: 30px 10px;
 }
 
 /* =============================================
@@ -7556,16 +7556,16 @@ body {
   border: 1px solid #f0f2eb;
 }
 
-.hb-post:hover {
+/*.hb-post:hover {
   -webkit-box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 20px -3px rgba(0, 0, 0, 0.2);
-}
+}*/
 
-.hb-post:hover .hb-postimage:before {
+/*.hb-post:hover .hb-postimage:before {
   height: 100%;
   visibility: visible;
-}
+}*/
 
 .hb-postimage {
   margin: 0;
@@ -7616,11 +7616,12 @@ body {
 .hb-posttitle {
   float: left;
   width: 100%;
+    min-height: 90px;
 }
 
 .hb-posttitle h3 {
   font-size: 20px;
-  line-height: 23px;
+  line-height: 33px;
   color: #2d2c40;
   margin: 0 0 20px;
   font-weight: 500;
@@ -8018,8 +8019,9 @@ body {
 ============================================= */
 .hb-innerbanner {
     background-size: cover;
-    background-image: url("/images/innerbanner.jpg");
+   
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .hb-innerbanner-area {
@@ -10242,7 +10244,7 @@ body {
 }
 
 .hb-innerbanner-area.service {
-  padding: 53px 0 60px;
+  padding: 180px 0 ;
 }
 
 .hb-innerbanner-area.service .hb-bannarheading h1 {
@@ -11110,86 +11112,6 @@ body {
   visibility: visible;
 }
 
-.loader-holder {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.loader-holder .block {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 6.250em;
-  height: 6.250em;
-  -webkit-animation: rotate 2.4s linear infinite;
-  animation: rotate 2.4s linear infinite;
-}
-
-.loader-holder .white {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  -webkit-animation: flash 2.4s linear infinite;
-  animation: flash 2.4s linear infinite;
-  opacity: 0;
-}
-
-.loader-holder .dot {
-  position: absolute;
-  margin: auto;
-  width: 2.4em;
-  height: 2.4em;
-  border-radius: 100%;
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.loader-holder .dot:nth-child(2) {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #FF4444;
-  -webkit-animation: dotsY 2.4s linear infinite;
-  animation: dotsY 2.4s linear infinite;
-}
-
-.loader-holder .dot:nth-child(3) {
-  left: 0;
-  right: 0;
-  top: 0;
-  background: #FFBB33;
-  -webkit-animation: dotsX 2.4s linear infinite;
-  animation: dotsX 2.4s linear infinite;
-}
-
-.loader-holder .dot:nth-child(4) {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: #99CC00;
-  -webkit-animation: dotsY 2.4s linear infinite;
-  animation: dotsY 2.4s linear infinite;
-}
-
-.loader-holder .dot:nth-child(5) {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #33B5E5;
-  -webkit-animation: dotsX 2.4s linear infinite;
-  animation: dotsX 2.4s linear infinite;
-}
 
 @-webkit-keyframes rotate {
   0% {

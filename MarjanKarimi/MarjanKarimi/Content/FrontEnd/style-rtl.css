@@ -180,6 +180,9 @@ a.hb-btn {
 .hb-blogdetails .hb-post .hb-description p {
     text-align: justify;
     direction: rtl;
+    color: #333;
+    font-size: 15px;
+    line-height: 28px;
 }
 
 .hb-blogdetails .hb-post .hb-postmeta li:after {
@@ -274,9 +277,9 @@ a.hb-btn {
 
 
 .hb-blogdetails .hb-post .hb-description li {
-    color: #7a7992;
+    color: #333;
     font-size: 14px;
-    margin: 0 0 14px;
+    margin: 0 0 8px;
     direction: rtl;
     text-align: right;
 }
@@ -288,6 +291,20 @@ a.hb-btn {
 .hb-description h2, .hb-description h3, .hb-description h4 {
     direction: rtl;
     text-align: right;
+}
+
+.hb-description h2 {
+    font-size: 25px;
+}
+
+
+.hb-description h3 {
+    font-size: 22px;
+}
+
+
+.hb-description h4 {
+    font-size: 18px;
 }
 
 .phone-home {
@@ -427,4 +444,23 @@ a.hb-btn {
     }
 #hb-servicesslider2 .single-feature {
     border: 1px solid #ddd;
+}
+
+.hb-description P a {
+    color: #d09217;
+    text-decoration: none;
+}
+
+.overlay-main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #646262;
+    opacity: 0.7;
+}
+
+#errorDivBlog, #SuccessDivBlog {
+    display: none;
 }
